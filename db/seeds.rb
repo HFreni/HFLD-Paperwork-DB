@@ -13,7 +13,6 @@ timing = Benchmark.measure { Color.import columns, values, validate: false, on_d
 
 puts timing
 
-
 # require 'csv'
 #
 # datafile = Rails.root + 'db/HFLD-Gels.csv'
