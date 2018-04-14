@@ -36,6 +36,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Postgres Copy
 gem 'postgres-copy'
 
+# Use ActiveRecord-Import
+gem 'activerecord-import'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
