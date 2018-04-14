@@ -16,3 +16,15 @@ export DBHOST="DBHOST"
 export DBUSERNAME="USERNAME"
 export DBPASSWORD="PASSWORD"
 ```
+
+Next, let's run our standard db migration & creation.
+
+To get up & running, use:
+```bash
+rake db:create db:migrate
+```
+If you don't mind losing data, and want to drop the tables, please run:
+
+```bash
+rake db:drop db:create db:migrate
+```

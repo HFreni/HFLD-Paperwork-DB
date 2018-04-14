@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 2018_04_14_044922) do
   enable_extension "plpgsql"
 
   create_table "colors", force: :cascade do |t|
-    t.string "gel_number"
+    t.string "gel_num"
     t.string "gel_name"
-    t.string "hex_value"
+    t.string "gel_hex"
     t.integer "manufacturer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -106,6 +106,10 @@ GEM
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     pg (1.0.0)
+    postgres-copy (1.4.0)
+      activerecord (>= 5.1)
+      pg (>= 0.17)
+      responders
     public_suffix (3.0.2)
     puma (3.11.4)
     rack (2.0.4)
@@ -139,6 +143,9 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
     sass (3.5.6)
@@ -200,6 +207,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg
+  postgres-copy
   puma (~> 3.11)
   rails (~> 5.2.0)
   sass-rails (~> 5.0)
