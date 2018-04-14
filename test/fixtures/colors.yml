@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gel_number: MyString
+  gel_name: MyString
+  hex_value: MyString
+  manufacturer_id: 1
+
+two:
+  gel_number: MyString
+  gel_name: MyString
+  hex_value: MyString
+  manufacturer_id: 1

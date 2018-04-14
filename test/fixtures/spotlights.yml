@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  spotlight_op: 1
+  spotlight_notes: MyText
+  spotlight_position: 1
+
+two:
+  name: MyString
+  spotlight_op: 1
+  spotlight_notes: MyText
+  spotlight_position: 1

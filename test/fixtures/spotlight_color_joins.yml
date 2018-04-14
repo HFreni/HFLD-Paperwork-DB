@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ID: 
+  spotlightID: 1
+  colorID: 1
+
+two:
+  ID: 
+  spotlightID: 1
+  colorID: 1

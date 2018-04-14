@@ -1,0 +1,17 @@
+<h1>New Spotlight</h1>
+
+<%= form_with scope: :spotlight, url: spotlights_path, local: true do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= form.label :notes %><br>
+    <%= form.text_area :notes %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

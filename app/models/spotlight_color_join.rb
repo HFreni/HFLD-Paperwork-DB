@@ -1,0 +1,2 @@
+class SpotlightColorJoin < ApplicationRecord
+end

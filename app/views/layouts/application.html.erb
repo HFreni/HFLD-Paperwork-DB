@@ -7,9 +7,30 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css' %>
+    <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css.map' %>
+    <%= javascript_include_tag 'https://use.fontawesome.com/releases/v5.0.6/js/all.js' %>
   </head>
 
   <body>
+    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <%= image_tag("LOGO.png") %>
+        </a>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">Spotlight</a>
+        <div class="navbar-dropdown">
+            <a class="navbar-item" href="/spotlight-config">Spotlight Setup</a>
+            <a class="navbar-item" href="/spotlight-cues">Spotlight Cues</a>
+        </div>
+      </div>
+      <div class="navbar-item">
+        <a class="navbar-link">Inventory Management</a>
+      </div>
+      <a class="navbar-item" href="/gelcolors">Gel Colors</a>
+    </nav>
     <%= yield %>
   </body>
 </html>
