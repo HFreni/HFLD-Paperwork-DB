@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=https://www.github.com/hfreni/HFLD-Paperwork-DB/raw/master/documentation/img/HFLD-PMP@3x.png/>
+  <img src=https://www.github.com/hfreni/HFLD-Paperwork-DB/raw/master/documentation/img/HFLD_PMP@4x.png/>
 </p>
 
 
