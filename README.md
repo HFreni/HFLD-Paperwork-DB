@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In order to get started with this paperwork management portal, you must do a few things. 
 
-Things you may want to cover:
+## DB Setup
 
-* Ruby version
+Since we're using ENV variables to store our ```postgresql``` database connection info, you're going to have to export a few things:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+export DBHOST="DBHOST"
+export DBUSERNAME="USERNAME"
+export DBPASSWORD="PASSWORD"
+```
