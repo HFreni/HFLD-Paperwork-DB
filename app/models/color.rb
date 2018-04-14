@@ -1,3 +1,3 @@
-class Color < ActiveRecord::Base
-  acts_as_copy_target
+class Color < ApplicationRecord
+    validates :id, uniqueness: true
 end

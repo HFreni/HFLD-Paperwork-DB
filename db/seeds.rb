@@ -10,4 +10,12 @@ require 'csv'
 
 datafile = Rails.root + 'db/HFLD-Gels.csv'
 
-Color.copy_from datafile
+CSV.foreach(datafile, headers: true) do |row|
+  Color.find_or_create_by({id: row[0]}) do |hr|
+    hr.id = row[0]
+    hr.gel_num = row[1]
+    hr.gel_name = row[2]
+    hr.gel_hex = row[3]
+    hr.manufacturer_id = row[4]
+  end
+end
