@@ -1,6 +1,7 @@
-# README
-
 ![image](https://www.github.com/hfreni/HFLD-Paperwork-DB/raw/master/documentation/img/HFLD-LOGO.png)
+![image](https://www.github.com/hfreni/HFLD-Paperwork-DB/raw/master/documentation/img/HFLD-PMP@3x.png)
+
+# README
 
 In order to get started with this paperwork management portal, you must do a few things, they're listed below.
 
