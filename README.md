@@ -1,5 +1,7 @@
-![image](https://www.github.com/hfreni/HFLD-Paperwork-DB/raw/master/documentation/img/HFLD-LOGO.png)
-![image](https://www.github.com/hfreni/HFLD-Paperwork-DB/raw/master/documentation/img/HFLD-PMP@3x.png)
+<p align="center">
+  ![image](https://www.github.com/hfreni/HFLD-Paperwork-DB/raw/master/documentation/img/HFLD-PMP@3x.png)
+</p>
+
 
 # README
 
