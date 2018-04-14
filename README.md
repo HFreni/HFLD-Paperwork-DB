@@ -1,6 +1,8 @@
 # README
 
-In order to get started with this paperwork management portal, you must do a few things. 
+![image](https://www.github.com/hfreni/HFLD-Paperwork-DB/raw/master/documentation/img/HFLD-LOGO.png)
+
+In order to get started with this paperwork management portal, you must do a few things, they're listed below.
 
 ## DB Setup
 
