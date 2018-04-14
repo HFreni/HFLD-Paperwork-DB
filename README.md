@@ -1,5 +1,5 @@
 <p align="center">
-  ![image](https://www.github.com/hfreni/HFLD-Paperwork-DB/raw/master/documentation/img/HFLD-PMP@3x.png)
+  <img src=https://www.github.com/hfreni/HFLD-Paperwork-DB/raw/master/documentation/img/HFLD-PMP@3x.png/>
 </p>
 
 
