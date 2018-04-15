@@ -23,8 +23,15 @@ To get up & running, use:
 ```bash
 rake db:create db:migrate
 ```
+
 If you don't mind losing data, and want to drop the tables, please run:
 
 ```bash
 rake db:drop db:create db:migrate
+```
+
+In order to populate the gel colors table from the included CSV file (which contains HEX codes for 4 of the largest lighting gel manufacturers: Apollo, GAM, Rosco, and Lee), run this command:
+
+```bash
+rake db:seed
 ```
