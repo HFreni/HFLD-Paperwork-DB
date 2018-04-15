@@ -1,0 +1,2 @@
+module SpotlightCuesHelper
+end

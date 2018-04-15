@@ -1,0 +1,2 @@
+class SpotlightCuesController < ApplicationController
+end

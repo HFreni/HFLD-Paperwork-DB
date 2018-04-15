@@ -45,3 +45,11 @@ In order to populate the gel colors table from the included CSV file (which cont
 ```bash
 rake db:seed
 ```
+
+## Development
+
+This is the proposed schema currently, which is only partially built
+
+<p align="center">
+  <img src=https://www.github.com/hfreni/HFLD-Paperwork-DB/raw/master/documentation/img/Schema.png/>
+</p>

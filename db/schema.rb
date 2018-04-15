@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_14_235640) do
+ActiveRecord::Schema.define(version: 2018_04_15_003058) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,27 @@ ActiveRecord::Schema.define(version: 2018_04_14_235640) do
 
   create_table "gel_manufacturers", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "spotlight_cue_data", force: :cascade do |t|
+    t.integer "spotlight_id"
+    t.integer "color"
+    t.integer "size"
+    t.integer "intensity"
+    t.integer "time"
+    t.text "pickup"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "spotlight_cues", force: :cascade do |t|
+    t.integer "lxq"
+    t.float "q"
+    t.text "cueInfo"
+    t.boolean "scene"
+    t.boolean "song"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

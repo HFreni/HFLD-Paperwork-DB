@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  spotlight_id: 1
+  color: 1
+  size: 1
+  intensity: 1
+  time: 1
+  pickup: MyText
+
+two:
+  spotlight_id: 1
+  color: 1
+  size: 1
+  intensity: 1
+  time: 1
+  pickup: MyText
