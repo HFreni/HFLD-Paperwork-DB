@@ -7,6 +7,16 @@
 
 In order to get started with this paperwork management portal, you must do a few things, they're listed below.
 
+## Installing Dependencies
+
+In order to get started, make sure you have Ruby 2.5, and Rails 5.
+
+Once you have these dependencies installed on your system, run this terminal command:
+
+```bash
+bundle
+```
+
 ## DB Setup
 
 Since we're using ENV variables to store our ```postgresql``` database connection info, you're going to have to export a few things:
