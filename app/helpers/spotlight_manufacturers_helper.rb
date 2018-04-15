@@ -1,0 +1,2 @@
+module SpotlightManufacturerHelper
+end

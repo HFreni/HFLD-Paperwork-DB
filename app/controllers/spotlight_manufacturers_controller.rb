@@ -1,0 +1,2 @@
+class SpotlightManufacturerController < ApplicationController
+end
