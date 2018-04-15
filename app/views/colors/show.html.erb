@@ -1,9 +1,24 @@
-<p>
-  <strong>Color #:</strong>
-  <%= @color.gel_num %>
-</p>
-
-<p>
-  <strong>Color Name:</strong>
-  <%= @color.gel_name %>
-</p>
+<section class="section">
+  <div class="container">
+    <table class="table is-fullwidth">
+      <thead>
+        <tr>
+          <th>Color Number</th>
+          <th>Color Name</th>
+          <th>Hex Code</th>
+          <th>Manufacturer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @color.gel_num %></td>
+          <td><%= @color.gel_name %></td>
+          <td style="background-color: <%= @color.gel_hex %> ;">
+            <%= @color.gel_hex %>
+          </td>
+          <td><%= @color.manufacturer_id %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

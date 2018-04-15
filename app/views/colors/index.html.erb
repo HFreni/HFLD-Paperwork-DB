@@ -7,6 +7,7 @@
           <th>Color Name</th>
           <th>Hex Code</th>
           <th>Manufacturer</th>
+          <th>Direct</th>
         </tr>
       </thead>
       <tbody>
@@ -18,6 +19,7 @@
               <%= color.gel_hex %>
             </td>
             <td><%= color.manufacturer_id %></td>
+            <td><%= link_to 'Show', color_path(color)%></td>
           </tr>
         <% end %>
       </tbody>

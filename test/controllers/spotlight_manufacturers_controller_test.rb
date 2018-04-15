@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SpotlightManufacturerControllerTest < ActionDispatch::IntegrationTest
+class SpotlightManufacturersControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

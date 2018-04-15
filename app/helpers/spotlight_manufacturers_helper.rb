@@ -1,2 +1,2 @@
-module SpotlightManufacturerHelper
+module SpotlightManufacturersHelper
 end

@@ -1,2 +1,2 @@
-class SpotlightManufacturerController < ApplicationController
+class SpotlightManufacturersController < ApplicationController
 end
