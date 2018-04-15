@@ -1,2 +1,0 @@
-class SpotlightManufacturersController < ApplicationController
-end

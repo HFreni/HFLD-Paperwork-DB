@@ -1,2 +1,0 @@
-class SpotlightCue < ApplicationRecord
-end

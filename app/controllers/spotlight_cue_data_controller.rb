@@ -1,2 +1,0 @@
-class SpotlightCueDataController < ApplicationController
-end

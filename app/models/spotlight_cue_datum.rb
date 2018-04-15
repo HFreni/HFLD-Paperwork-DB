@@ -1,2 +1,0 @@
-class SpotlightCueDatum < ApplicationRecord
-end
