@@ -1,24 +1,23 @@
 <section class="section">
   <div class="container">
-    <table class="table is-fullwidth">
-      <thead>
-        <tr>
-          <th>Color Number</th>
-          <th>Color Name</th>
-          <th>Hex Code</th>
-          <th>Manufacturer</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><%= @color.gel_num %></td>
-          <td><%= @color.gel_name %></td>
-          <td style="background-color: <%= @color.gel_hex %> ;">
-            <%= @color.gel_hex %>
-          </td>
-          <td><%= @color.manufacturer_id %></td>
-        </tr>
-      </tbody>
-    </table>
+    <p id="notice"><%= notice %></p>
+    <p>
+      <strong>Gel Number:</strong>
+      <%= @color.gel_num %>
+    </p>
+    <p>
+      <strong>Gel Name:</strong>
+      <%= @color.gel_name %>
+    </p>
+    <p style="background-color: <%= @color.gel_hex %> ;">
+      <strong>Gel HEX:</strong>
+      <%= @color.gel_hex %>
+    </p>
+    <p>
+      <strong>Manufacturer fk:</strong>
+      <%= @color.manufacturer_fk %>
+    </p>
+    <%= link_to 'Edit', edit_color_path(@color) %> |
+    <%= link_to 'Back', colors_path %>
   </div>
 </section>

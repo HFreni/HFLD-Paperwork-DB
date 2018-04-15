@@ -1,35 +1,39 @@
-<p id="notice"><%= notice %></p>
+<section class="section">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
 
-<h1>Spotlights</h1>
+    <h1>Spotlights</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Spotlight name</th>
-      <th>Spotlight op fk</th>
-      <th>Spotlight model fk</th>
-      <th>Spotlight notes</th>
-      <th>Spotlight position fk</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <table class="table is-fullwidth">
+      <thead>
+        <tr>
+          <th>Spotlight name</th>
+          <th>Spotlight op fk</th>
+          <th>Spotlight model fk</th>
+          <th>Spotlight notes</th>
+          <th>Spotlight position fk</th>
+          <th colspan="3">Show / Edit / Destory</th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @spotlights.each do |spotlight| %>
-      <tr>
-        <td><%= spotlight.spotlight_name %></td>
-        <td><%= spotlight.spotlight_op_fk %></td>
-        <td><%= spotlight.spotlight_model_fk %></td>
-        <td><%= spotlight.spotlight_notes %></td>
-        <td><%= spotlight.spotlight_position_fk %></td>
-        <td><%= link_to 'Show', spotlight %></td>
-        <td><%= link_to 'Edit', edit_spotlight_path(spotlight) %></td>
-        <td><%= link_to 'Destroy', spotlight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @spotlights.each do |spotlight| %>
+          <tr>
+            <td><%= spotlight.spotlight_name %></td>
+            <td><%= spotlight.spotlight_op_fk %></td>
+            <td><%= spotlight.spotlight_model_fk %></td>
+            <td><%= spotlight.spotlight_notes %></td>
+            <td><%= spotlight.spotlight_position_fk %></td>
+            <td><%= link_to 'Show', spotlight %></td>
+            <td><%= link_to 'Edit', edit_spotlight_path(spotlight) %></td>
+            <td><%= link_to 'Destroy', spotlight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<br>
+    <br>
 
-<%= link_to 'New Spotlight', new_spotlight_path %>
+    <%= link_to 'New Spotlight', new_spotlight_path %>
+  </div>
+</section>

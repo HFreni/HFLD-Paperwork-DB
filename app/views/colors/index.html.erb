@@ -1,5 +1,7 @@
 <section class="section">
   <div class="container">
+    <h1 class="title">New Color</h1>
+    <p id="notice"><%= notice %></p>
     <table class="table is-fullwidth">
       <thead>
         <tr>
@@ -7,19 +9,21 @@
           <th>Color Name</th>
           <th>Hex Code</th>
           <th>Manufacturer</th>
-          <th>Direct</th>
+          <th colspan="3">Show / Edit / Destroy</th>
         </tr>
       </thead>
       <tbody>
-        <% @color.each do |color| %>
+        <% @colors.each do |color| %>
           <tr>
             <td><%= color.gel_num %></td>
             <td><%= color.gel_name %></td>
             <td style="background-color: <%= color.gel_hex %> ;">
               <%= color.gel_hex %>
             </td>
-            <td><%= color.manufacturer_id %></td>
-            <td><%= link_to 'Show', color_path(color)%></td>
+            <td><%= color.manufacturer_fk %></td>
+            <td><%= link_to 'Show', color %></td>
+            <td><%= link_to 'Edit', edit_color_path(color) %></td>
+            <td><%= link_to 'Destroy', color, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>

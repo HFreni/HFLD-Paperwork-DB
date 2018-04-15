@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_15_221510) do
+ActiveRecord::Schema.define(version: 2018_04_15_222402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2018_04_15_221510) do
     t.string "gel_num"
     t.string "gel_name"
     t.string "gel_hex"
-    t.integer "manufacturer_id"
+    t.integer "manufacturer_fk"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

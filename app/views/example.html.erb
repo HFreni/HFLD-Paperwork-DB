@@ -1,0 +1,39 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">New Color</h1>
+    <%= form_with scope: :color, url: colors_path, local: true do |form| %>
+
+      <div class="field">
+        <%= form.label :gel_num, :class => "label" %>
+        <div class="control">
+          <%= form.text_field :gel_num, :class =>"input" %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= form.label :gel_name, :class => "label" %>
+        <div class="control">
+          <%= form.text_area :gel_name, :class =>"input" %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= form.label :gel_hex, :class => "label" %>
+        <div class="control">
+          <%= form.text_area :gel_hex, :class =>"input" %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= form.label :manufacturer_id, :class => "label" %>
+        <div class="control">
+          <%= form.text_area :manufacturer_id, :class =>"input" %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= form.submit :class => "button is-link" %>
+      </div>
+    <% end %>
+  </div>
+</section>
