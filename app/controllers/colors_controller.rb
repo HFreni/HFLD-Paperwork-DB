@@ -1,20 +1,24 @@
 class ColorsController < ApplicationController
+  def index
+    @color = Color.all
+  end
   def show
-      @spotlight = Color.find(params[:id])
+      @color = Color.find(params[:id])
   end
 
   def new
+
   end
 
   def create
-      @spotlight = Color.new(spotlight_params)
+      @color = Color.new(color_params)
 
-      @spotlight.save
-      redirect_to @spotlight
+      @color.save
+      redirect_to @color
   end
 
   private
-      def spotlight_params
-          params.require(:spotlight).permit(:name,:notes)
+      def color_params
+          params.require(:color).permit(:id,:gel_num,:gel_name,:gel_hex,:manufacturer_id)
       end
 end

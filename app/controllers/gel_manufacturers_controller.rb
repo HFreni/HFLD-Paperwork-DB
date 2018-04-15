@@ -1,0 +1,2 @@
+class GelManufacturersController < ApplicationController
+end

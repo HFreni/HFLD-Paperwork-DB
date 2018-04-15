@@ -15,6 +15,6 @@ class SpotlightsController < ApplicationController
 
     private
         def spotlight_params
-            params.require(:spotlight).permit(:name,:notes)
+            params.require(:spotlight).permit(:name,:spotlight_notes)
         end
 end
