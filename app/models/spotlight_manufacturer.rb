@@ -1,0 +1,2 @@
+class SpotlightManufacturer < ApplicationRecord
+end
