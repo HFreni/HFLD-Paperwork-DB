@@ -15,7 +15,6 @@ class SpotlightsController < ApplicationController
   # GET /spotlights/new
   def new
     @spotlight = Spotlight.new
-    @spotlight.color_frames.build
   end
 
   # GET /spotlights/1/edit
