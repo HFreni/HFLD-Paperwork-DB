@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_15_222402) do
+ActiveRecord::Schema.define(version: 2018_04_16_213255) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "color_frames", force: :cascade do |t|
+    t.bigint "color_id"
+    t.bigint "spotlight_id"
+    t.integer "frame_position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["color_id"], name: "index_color_frames_on_color_id"
+    t.index ["spotlight_id"], name: "index_color_frames_on_spotlight_id"
+  end
 
   create_table "colors", force: :cascade do |t|
     t.string "gel_num"
@@ -34,4 +44,6 @@ ActiveRecord::Schema.define(version: 2018_04_15_222402) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "color_frames", "colors"
+  add_foreign_key "color_frames", "spotlights"
 end

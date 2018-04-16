@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @color_frame.color %>
+</p>
+
+<p>
+  <strong>Spotlight:</strong>
+  <%= @color_frame.spotlight %>
+</p>
+
+<p>
+  <strong>Frame position:</strong>
+  <%= @color_frame.frame_position %>
+</p>
+
+<%= link_to 'Edit', edit_color_frame_path(@color_frame) %> |
+<%= link_to 'Back', color_frames_path %>

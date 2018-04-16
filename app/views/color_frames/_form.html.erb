@@ -1,0 +1,32 @@
+<%= form_with(model: color_frame, local: true) do |form| %>
+  <% if color_frame.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(color_frame.errors.count, "error") %> prohibited this color_frame from being saved:</h2>
+
+      <ul>
+      <% color_frame.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :color_id %>
+    <%= form.text_field :color_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :spotlight_id %>
+    <%= form.text_field :spotlight_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :frame_position %>
+    <%= form.number_field :frame_position %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

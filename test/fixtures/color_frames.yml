@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  color: one
+  spotlight: one
+  frame_position: 1
+
+two:
+  color: two
+  spotlight: two
+  frame_position: 1

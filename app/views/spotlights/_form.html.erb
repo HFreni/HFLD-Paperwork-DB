@@ -33,8 +33,14 @@
 
     <div class="field">
       <%= form.label :spotlight_position_fk, :class => "label"  %>
-      <%= form.number_field :spotlight_position_fk, :class =>"input" %>
+      <%= form.text_field :spotlight_position_fk, :class =>"input" %>
     </div>
+    <% spotlight.colors.each do |l| %>
+      <div class="field">
+        <%= form.label l.gel_num, :class => "label"  %>
+        <%= form.text_field l.gel_num, :class =>"input" %>
+      </td>
+    <% end %>
 
     <div class="actions">
       <%= form.submit :class => "button is-link" %>
