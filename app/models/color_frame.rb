@@ -2,8 +2,8 @@ class ColorFrame < ApplicationRecord
   belongs_to :color
   belongs_to :spotlight
 
-  validates_presence_of :color
-  validates_presence_of :spotlight
+  validates :color, presence: true
+  validates :spotlight, presence: true
 
-  accepts_nested_attributes_for :color
+  accepts_nested_attributes_for :spotlight
 end
