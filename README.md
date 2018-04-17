@@ -46,6 +46,8 @@ In order to populate the gel colors table from the included CSV file (which cont
 rake db:seed
 ```
 
+When depoloying with Docker, please modify the Dockerfile to have appropriate ENV variables for the database. 
+
 ## Development
 
 This is the proposed schema currently, which is only partially built
