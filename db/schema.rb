@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_17_191458) do
+ActiveRecord::Schema.define(version: 2018_04_17_215224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,34 @@ ActiveRecord::Schema.define(version: 2018_04_17_191458) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "cue_master_cues", force: :cascade do |t|
+    t.bigint "master_cue_id"
+    t.bigint "cue_spotlight_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cue_spotlight_id"], name: "index_cue_master_cues_on_cue_spotlight_id"
+    t.index ["master_cue_id"], name: "index_cue_master_cues_on_master_cue_id"
+  end
+
+  create_table "cue_spotlights", force: :cascade do |t|
+    t.bigint "spotlight_cue_id"
+    t.bigint "spotlight_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["spotlight_cue_id"], name: "index_cue_spotlights_on_spotlight_cue_id"
+    t.index ["spotlight_id"], name: "index_cue_spotlights_on_spotlight_id"
+  end
+
+  create_table "master_cues", force: :cascade do |t|
+    t.float "lx_cue"
+    t.float "spot_cue"
+    t.text "cue_info"
+    t.boolean "scene"
+    t.boolean "song"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "people", force: :cascade do |t|
     t.bigint "spotlight_id"
     t.string "person_fname"
@@ -43,6 +71,41 @@ ActiveRecord::Schema.define(version: 2018_04_17_191458) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["spotlight_id"], name: "index_people_on_spotlight_id"
+  end
+
+  create_table "spotlight_actions", force: :cascade do |t|
+    t.bigint "spotlight_cue_id"
+    t.string "name"
+    t.text "description"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["spotlight_cue_id"], name: "index_spotlight_actions_on_spotlight_cue_id"
+  end
+
+  create_table "spotlight_cues", force: :cascade do |t|
+    t.bigint "color_id"
+    t.bigint "spotlight_size_id"
+    t.bigint "spotlight_intensity_id"
+    t.bigint "spotlight_action_id"
+    t.integer "time"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["color_id"], name: "index_spotlight_cues_on_color_id"
+    t.index ["spotlight_action_id"], name: "index_spotlight_cues_on_spotlight_action_id"
+    t.index ["spotlight_intensity_id"], name: "index_spotlight_cues_on_spotlight_intensity_id"
+    t.index ["spotlight_size_id"], name: "index_spotlight_cues_on_spotlight_size_id"
+  end
+
+  create_table "spotlight_intensities", force: :cascade do |t|
+    t.bigint "spotlight_cue_id"
+    t.string "name"
+    t.text "description"
+    t.integer "intensity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["spotlight_cue_id"], name: "index_spotlight_intensities_on_spotlight_cue_id"
   end
 
   create_table "spotlight_models", force: :cascade do |t|
@@ -64,6 +127,16 @@ ActiveRecord::Schema.define(version: 2018_04_17_191458) do
     t.index ["spotlight_id"], name: "index_spotlight_positions_on_spotlight_id"
   end
 
+  create_table "spotlight_sizes", force: :cascade do |t|
+    t.bigint "spotlight_cue_id"
+    t.string "name"
+    t.text "description"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["spotlight_cue_id"], name: "index_spotlight_sizes_on_spotlight_cue_id"
+  end
+
   create_table "spotlights", force: :cascade do |t|
     t.string "spotlight_name"
     t.text "spotlight_notes"
@@ -73,4 +146,8 @@ ActiveRecord::Schema.define(version: 2018_04_17_191458) do
 
   add_foreign_key "color_frames", "colors"
   add_foreign_key "color_frames", "spotlights"
+  add_foreign_key "spotlight_cues", "colors"
+  add_foreign_key "spotlight_cues", "spotlight_actions"
+  add_foreign_key "spotlight_cues", "spotlight_intensities"
+  add_foreign_key "spotlight_cues", "spotlight_sizes"
 end
