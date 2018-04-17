@@ -6,7 +6,7 @@
 
     <table class="table is-fullwidth">
       <thead>
-        <% @spotlights.each do |spotlight| %>
+        
           <tr>
             <th>Spotlight Name</th>
             <th>Spotlight Op</th>
@@ -14,12 +14,13 @@
             <th>Spotlight Notes</th>
             <th>Spotlight Position</th>
             <th># of Color Frames</th>
-            <th colspan="<%= spotlight.color_frames.count %>">
-              Gel Colors
-            </th>
+            <% @spotlights.each do |spotlight| %>
+              <th colspan="<%= spotlight.color_frames.count %>">
+                Gel Colors
+              </th>
+            <% end %>
             <th colspan="3">Show / Edit / Destory</th>
           </tr>
-        <% end %>
       </thead>
 
       <tbody>
