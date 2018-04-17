@@ -14,6 +14,9 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require cocoon
+
+
 
 function pickTextColorBasedOnBgColorAdvanced(bgColor, lightColor, darkColor) {
     var color = (bgColor.charAt(0) === '#') ? bgColor.substring(1, 7) : bgColor;

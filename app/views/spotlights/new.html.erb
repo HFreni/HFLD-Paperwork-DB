@@ -1,5 +1,15 @@
-<h1>New Spotlight</h1>
+<section class="section">
+  <div class="container">
+    <h1 class="title">New Spotlight</h1>
 
-<%= render 'form', spotlight: @spotlight %>
+    <%= image_tag("SpotOp.png") %>
 
-<%= link_to 'Back', spotlights_path %>
+    <%= render 'form', spotlight: @spotlight %>
+
+    <div class="field is-grouped is-grouped-centered">
+      <p class="control">
+        <%= button_to 'Back', spotlights_path, :class => "button is-link", :method => :get %>
+      </p>
+    </div>
+  </div>
+</section>

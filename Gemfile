@@ -48,8 +48,8 @@ gem 'prawn-rails'
 # Use Cocoon
 gem 'cocoon'
 
-# Use Formtastic
-gem 'formtastic', '~> 3.0'
+# Use simple-form
+gem 'simple_form'
 
 
 group :development, :test do
