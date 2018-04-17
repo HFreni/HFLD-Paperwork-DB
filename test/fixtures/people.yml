@@ -3,13 +3,13 @@
 one:
   person_fname: MyString
   person_lname: MyString
-  person_phone: MyString
   person_email: MyString
-  person_role: MyString
+  person_phone: MyString
+  person_role: 
 
 two:
   person_fname: MyString
   person_lname: MyString
-  person_phone: MyString
   person_email: MyString
-  person_role: MyString
+  person_phone: MyString
+  person_role: 

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Spotlight Models</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Spotlight name</th>
+      <th>Spotlight weight</th>
+      <th>Manufacturer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spotlight_models.each do |spotlight_model| %>
+      <tr>
+        <td><%= spotlight_model.spotlight_name %></td>
+        <td><%= spotlight_model.spotlight_weight %></td>
+        <td><%= spotlight_model.manufacturer %></td>
+        <td><%= link_to 'Show', spotlight_model %></td>
+        <td><%= link_to 'Edit', edit_spotlight_model_path(spotlight_model) %></td>
+        <td><%= link_to 'Destroy', spotlight_model, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spotlight Model', new_spotlight_model_path %>

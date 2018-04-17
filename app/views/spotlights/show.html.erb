@@ -7,12 +7,12 @@
 
 <p>
   <strong>Spotlight op fk:</strong>
-  <%= @spotlight.spotlight_op %>
+  <%= @spotlight.people.ids %>
 </p>
 
 <p>
   <strong>Spotlight model fk:</strong>
-  <%= @spotlight.spotlight_model %>
+  <%= @spotlight.spotlight_models.ids %>
 </p>
 
 <p>
@@ -22,7 +22,7 @@
 
 <p>
   <strong>Spotlight position fk:</strong>
-  <%= @spotlight.spotlight_position %>
+  <%= @spotlight.spotlight_positions.ids %>
 </p>
 
 <%= link_to 'Edit', edit_spotlight_path(@spotlight) %> |
