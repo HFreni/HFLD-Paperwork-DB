@@ -1,0 +1,2 @@
+module CueSpotlightsHelper
+end

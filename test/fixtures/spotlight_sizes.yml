@@ -1,17 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  color: one
-  size: one
-  intensity: one
-  action: one
-  time: 1
+  name: MyString
   description: MyText
+  image: MyString
 
 two:
-  color: two
-  size: two
-  intensity: two
-  action: two
-  time: 1
+  name: MyString
   description: MyText
+  image: MyString

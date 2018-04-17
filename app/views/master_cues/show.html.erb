@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lx cue:</strong>
+  <%= @master_cue.lx_cue %>
+</p>
+
+<p>
+  <strong>Spot cue:</strong>
+  <%= @master_cue.spot_cue %>
+</p>
+
+<p>
+  <strong>Cue info:</strong>
+  <%= @master_cue.cue_info %>
+</p>
+
+<p>
+  <strong>Scene:</strong>
+  <%= @master_cue.scene %>
+</p>
+
+<p>
+  <strong>Song:</strong>
+  <%= @master_cue.song %>
+</p>
+
+<%= link_to 'Edit', edit_master_cue_path(@master_cue) %> |
+<%= link_to 'Back', master_cues_path %>
