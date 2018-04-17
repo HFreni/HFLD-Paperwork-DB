@@ -41,9 +41,9 @@
       <tr><th>Frame Position</th><th>Frame Color</th><th></th></tr>
     </thead>
     <tbody id="color_frames">
-    <%= f.fields_for :color_frames do |color_frame| %>
-      <%= render 'color_frame_fields', f: color_frame %>
-    <% end %>
+      <%= f.fields_for :color_frames do |color_frame| %>
+        <%= render 'color_frame_fields', f: color_frame %>
+      <% end %>
     </tbody>
   </table>
   <div id="links">
