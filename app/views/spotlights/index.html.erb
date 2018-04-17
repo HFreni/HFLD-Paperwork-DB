@@ -15,17 +15,15 @@
           <table class="table is-fullwidth">
             <thead>
               <tr>
-                <th>Color ID</th>
-                <th>Color #</th>
-                <th>Color Name</th>
+                <th>Frame Position</th>
+                <th>Color</th>
               </tr>
             </thead>
             <tbody>
-              <% for color_frame in spotlight.color_frames %>
+              <% for color_frame in spotlight.color_frames.order(:frame_position) %>
                 <tr>
-                  <th><%= color_frame.id %></th>
-                  <th><%= color_frame.color.gel_num %></th>
-                  <th style="background-color: <%= color_frame.color.gel_hex %> ;"><%= color_frame.color.gel_name %></th>
+                  <th><%= color_frame.frame_position %></th>
+                  <th style="background-color: <%= color_frame.color.gel_hex %>;"><%= link_to color_frame.color.full_name, color_frame.color, style: "color: \##{foregound_color_for_luma color_frame.color.luma}" %></th>
                 </tr>
               <% end %>
             </tbody>
