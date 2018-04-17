@@ -1,0 +1,48 @@
+  <%= form_with(model: spotlight, local: true) do |form| %>
+    <% if spotlight.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(spotlight.errors.count, "error") %> prohibited this spotlight from being saved:</h2>
+
+        <ul>
+        <% spotlight.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :spotlight_name, :class => "label"  %>
+      <%= form.text_field :spotlight_name, :class =>"input" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :spotlight_op_fk, :class => "label"  %>
+      <%= form.number_field :spotlight_op_fk, :class =>"input" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :spotlight_model_fk, :class => "label"  %>
+      <%= form.number_field :spotlight_model_fk, :class =>"input" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :spotlight_notes, :class => "label"  %>
+      <%= form.text_area :spotlight_notes, :class =>"input" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :spotlight_position_fk, :class => "label"  %>
+      <%= form.text_field :spotlight_position_fk, :class =>"input" %>
+    </div>
+    <% spotlight.colors.each do |l| %>
+      <div class="field">
+        <%= form.label l.gel_num, :class => "label"  %>
+        <%= form.text_field l.gel_num, :class =>"input" %>
+      </td>
+    <% end %>
+
+    <div class="actions">
+      <%= form.submit :class => "button is-link" %>
+    </div>
+  <% end %>

@@ -7,10 +7,6 @@ Rails.application.routes.draw do
   resources :colors
 
   resources :spotlights
-  resources :spotlightmanufacturers
-  resources :spotlightcues
-  resources :spotlightcuedatum
-  resources :positions
 
   root 'welcome#index'
 end

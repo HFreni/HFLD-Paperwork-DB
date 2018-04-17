@@ -1,48 +1,57 @@
 <section class="section">
   <div class="container">
-    <p id="notice"><%= notice %></p>
+    <p id="notice">
+      <%= notice %>
+    </p>
 
-    <h1>Spotlights</h1>
-
-    <table class="table is-fullwidth">
-      <thead>
-        
-          <tr>
-            <th>Spotlight Name</th>
-            <th>Spotlight Op</th>
-            <th>Spotlight Model</th>
-            <th>Spotlight Notes</th>
-            <th>Spotlight Position</th>
-            <th># of Color Frames</th>
-            <th>Gel Colors</th>
-            <th colspan="3"></th>
-          </tr>
-      </thead>
-
-      <tbody>
-        <% @spotlights.each do |spotlight| %>
-          <tr>
-            <td><%= spotlight.spotlight_name %></td>
-            <td><%= spotlight.spotlight_op_fk %></td>
-            <td><%= spotlight.spotlight_model_fk %></td>
-            <td><%= spotlight.spotlight_notes %></td>
-            <td><%= spotlight.spotlight_position_fk %></td>
-            <td><%= spotlight.color_frames.count %></td>
-            <% spotlight.colors.each do |l| %>
-              <td style="background-color: <%= l.gel_hex %> ;">
-                <%= l.gel_num %>
-              </td>
-            <% end %>
-            <td><%= link_to 'Show', spotlight %></td>
-            <td><%= link_to 'Edit', edit_spotlight_path(spotlight) %></td>
-            <td><%= link_to 'Destroy', spotlight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
+    <h1 class="title">Spotlights</h1>
+    <div class="columns">
+      <% for spotlight in @spotlights %>
+        <div class="column has-text-centered">
+          <p class="title">
+            <%= spotlight.spotlight_name %>
+          </p>
+          <%= image_tag("SpotOp.png") %>
+          <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>Color ID</th>
+                <th>Color</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for color_frame in spotlight.color_frames %>
+                <tr>
+                  <th><%= color_frame.id %></th>
+                  <th style="background-color: <%= color_frame.color.gel_hex %> ;"><%= color_frame.color.gel_name %></th>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <p class="subtitle"><%= spotlight.spotlight_position_fk %></p>
+          <p class="has-text-weight-bold spotNotes"><%= spotlight.spotlight_notes %></p>
+          <p> For Debug Purposes:
+            <%= spotlight.id %>
+          </p>
+          <br>
+          <div class="field is-grouped is-grouped-centered">
+            <p class="control">
+              <%= button_to 'Show', spotlight, :class => "button is-success", :method => :get  %>
+            </p>
+            <p class="control">
+              <%= button_to 'Edit', edit_spotlight_path(spotlight), :class => "button is-link", :method => :get %>
+            </p>
+            <p class="control">
+              <%= button_to 'Destroy', spotlight, method: :delete,:class => "button is-danger", data: { confirm: 'Are you sure?' } %>
+            </p>
+          </div>
+        </div>
         <% end %>
-      </tbody>
-    </table>
-
-    <br>
-
-    <%= link_to 'New Spotlight', new_spotlight_path %>
+      </div>
+      <div class="field is-grouped is-grouped-centered">
+        <p class="control">
+          <%= button_to 'New Spotlight', new_spotlight_path, :class => "button is-success", :method => :get  %>
+        </p>
+      </div>
   </div>
 </section>
