@@ -1,4 +1,4 @@
-<tr id="nested-fields">
+<tr class="nested-fields">
       <td><%= f.text_field :frame_position %></td>
       <td><%= f.collection_select(:color_id, @colors, :id, :full_name, prompt: true) %></td>
       <td><%= link_to_remove_association "remove frame", f %></td>

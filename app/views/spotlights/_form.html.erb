@@ -40,14 +40,14 @@
     <thead>
       <tr><th>Frame Position</th><th>Frame Color</th><th></th></tr>
     </thead>
-    <tbody id="color_frames">
+    <tbody class="color_frames">
       <%= f.fields_for :color_frames do |color_frame| %>
         <%= render 'color_frame_fields', f: color_frame %>
       <% end %>
     </tbody>
   </table>
   <div id="links">
-    <%= link_to_add_association 'add color frame', f, :color_frames %>
+    <%= link_to_add_association 'add color frame', f, :color_frames, data: {"association-insertion-node" => "tbody.color_frames", "association-insertion-method" => "append"}%>
   </div>
 
   <p class="control">
