@@ -16,13 +16,13 @@
   </div>
 
   <div class="field">
-    <%= f.label :spotlight_op_fk, :class => "label"  %>
-    <%= f.number_field :spotlight_op_fk, :class =>"input" %>
+    <%= f.label :spotlight_op, :class => "label"  %>
+    <%= f.number_field :spotlight_op, :class =>"input" %>
   </div>
 
   <div class="field">
-    <%= f.label :spotlight_model_fk, :class => "label"  %>
-    <%= f.number_field :spotlight_model_fk, :class =>"input" %>
+    <%= f.label :spotlight_model, :class => "label"  %>
+    <%= f.number_field :spotlight_model, :class =>"input" %>
   </div>
 
   <div class="field">
@@ -31,13 +31,24 @@
   </div>
 
   <div class="field">
-    <%= f.label :spotlight_position_fk, :class => "label"  %>
-    <%= f.text_field :spotlight_position_fk, :class =>"input" %>
+    <%= f.label :spotlight_position, :class => "label"  %>
+    <%= f.text_field :spotlight_position, :class =>"input" %>
   </div>
 
   <p class="subtitle"> Color Frames</p>
-  <ul>
-  </ul>
+  <table>
+    <thead>
+      <tr><th>Frame Position</th><th>Frame Color</th><th></th></tr>
+    </thead>
+    <tbody id="color_frames">
+    <%= f.fields_for :color_frames do |color_frame| %>
+      <%= render 'color_frame_fields', f: color_frame %>
+    <% end %>
+    </tbody>
+  </table>
+  <div id="links">
+    <%= link_to_add_association 'add color frame', f, :color_frames %>
+  </div>
 
   <p class="control">
     <%= f.submit :class => "button is-success" %>

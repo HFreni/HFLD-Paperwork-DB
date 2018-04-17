@@ -1,5 +1,6 @@
 class SpotlightsController < ApplicationController
   before_action :set_spotlight, only: [:show, :edit, :update, :destroy]
+  before_action :prepare_color_list, only: [:new, :edit, :update]
 
   # GET /spotlights
   # GET /spotlights.json
@@ -69,6 +70,11 @@ class SpotlightsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def spotlight_params
-      params.require(:spotlight).permit(:spotlight_name, :spotlight_op, :spotlight_model, :spotlight_notes, :spotlight_position, color_frame_attributes: ColorFrame.attribute_names.map(&:to_sym).push(:_destroy))
+      params.require(:spotlight).permit(:spotlight_name, :spotlight_op, :spotlight_model, :spotlight_notes, :spotlight_position, {color_frames_attributes: ColorFrame.attribute_names.map(&:to_sym).push(:_destroy)} )
+    end
+    
+    # Build out a sorted list of all gel colors to be used in the form select boxes
+    def prepare_color_list
+      @colors = Color.all.order(:manufacturer,:gel_name)
     end
 end
