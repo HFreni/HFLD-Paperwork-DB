@@ -6,3 +6,7 @@ ADD Gemfile /HFLD-Paperwork-DB/Gemfile
 ADD Gemfile.lock /HFLD-Paperwork-DB/Gemfile.lock
 RUN bundle install
 ADD . /HFLD-Paperwork-DB
+
+ENV DBHOST="hostname"
+ENV DBUSERNAME="username"
+ENV DBPASSWORD="password"
