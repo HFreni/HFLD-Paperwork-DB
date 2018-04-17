@@ -4,7 +4,13 @@
 
     <%= render 'form', spotlight: @spotlight %>
 
-    <%= link_to 'Show', @spotlight %> |
-    <%= link_to 'Back', spotlights_path %>
+    <div class="field is-grouped is-grouped-centered">
+      <p class="control">
+        <%= button_to 'Show', @spotlight, :class => "button is-success", :method => :get  %>
+      </p>
+      <p class="control">
+        <%= button_to 'Back', spotlights_path, :class => "button is-link", :method => :get %>
+      </p>
+    </div>
   </div>
 </section>

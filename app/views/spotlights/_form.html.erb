@@ -1,48 +1,18 @@
-  <%= form_with(model: spotlight, local: true) do |form| %>
-    <% if spotlight.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(spotlight.errors.count, "error") %> prohibited this spotlight from being saved:</h2>
-
-        <ul>
-        <% spotlight.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
+<%= semantic_form_for @spotlight do |f| %>
+  <% f.inputs do %>
+    <%= f.input :spotlight_name %>
+    <%= f.input :spotlight_notes %>
+    <h3>Color Frames</h3>
+    <div id='color-frames'>
+      <%= f.semantic_fields_for :color_frames do |color_frame| %>
+        <%= render 'color_frame_fields', :f => color_frame %>
+      <% end %>
+      <div class='links'>
+        <%= link_to_add_association 'add task', f, :color_frames %>
       </div>
+    </div>
+    <% f.buttons do %>
+      <%= f.submit 'Save' %>
     <% end %>
-
-    <div class="field">
-      <%= form.label :spotlight_name, :class => "label"  %>
-      <%= form.text_field :spotlight_name, :class =>"input" %>
-    </div>
-
-    <div class="field">
-      <%= form.label :spotlight_op_fk, :class => "label"  %>
-      <%= form.number_field :spotlight_op_fk, :class =>"input" %>
-    </div>
-
-    <div class="field">
-      <%= form.label :spotlight_model_fk, :class => "label"  %>
-      <%= form.number_field :spotlight_model_fk, :class =>"input" %>
-    </div>
-
-    <div class="field">
-      <%= form.label :spotlight_notes, :class => "label"  %>
-      <%= form.text_area :spotlight_notes, :class =>"input" %>
-    </div>
-
-    <div class="field">
-      <%= form.label :spotlight_position_fk, :class => "label"  %>
-      <%= form.text_field :spotlight_position_fk, :class =>"input" %>
-    </div>
-    <% spotlight.colors.each do |l| %>
-      <div class="field">
-        <%= form.label l.gel_num, :class => "label"  %>
-        <%= form.text_field l.gel_num, :class =>"input" %>
-      </td>
-    <% end %>
-
-    <div class="actions">
-      <%= form.submit :class => "button is-link" %>
-    </div>
   <% end %>
+<% end %>

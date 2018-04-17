@@ -29,17 +29,17 @@ ActiveRecord::Schema.define(version: 2018_04_16_213255) do
     t.string "gel_num"
     t.string "gel_name"
     t.string "gel_hex"
-    t.integer "manufacturer_fk"
+    t.integer "manufacturer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "spotlights", force: :cascade do |t|
     t.string "spotlight_name"
-    t.integer "spotlight_op_fk"
-    t.integer "spotlight_model_fk"
+    t.integer "spotlight_op"
+    t.integer "spotlight_model"
     t.text "spotlight_notes"
-    t.integer "spotlight_position_fk"
+    t.integer "spotlight_position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

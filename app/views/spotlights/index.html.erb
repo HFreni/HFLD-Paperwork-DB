@@ -16,13 +16,15 @@
             <thead>
               <tr>
                 <th>Color ID</th>
-                <th>Color</th>
+                <th>Color #</th>
+                <th>Color Name</th>
               </tr>
             </thead>
             <tbody>
               <% for color_frame in spotlight.color_frames %>
                 <tr>
                   <th><%= color_frame.id %></th>
+                  <th><%= color_frame.color.gel_num %></th>
                   <th style="background-color: <%= color_frame.color.gel_hex %> ;"><%= color_frame.color.gel_name %></th>
                 </tr>
               <% end %>
