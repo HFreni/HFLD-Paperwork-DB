@@ -53,5 +53,5 @@ When depoloying with Docker, please modify the Dockerfile to have appropriate EN
 This is the proposed schema currently, which is only partially built
 
 <p align="center">
-  <img src=https://www.github.com/hfreni/HFLD-Paperwork-DB/raw/master/documentation/img/Schema.png/>
+  <img src=https://www.github.com/hfreni/HFLD-Paperwork-DB/raw/master/documentation/img/Schema-2.png/>
 </p>

@@ -5,7 +5,7 @@ class SpotlightsController < ApplicationController
   # GET /spotlights
   # GET /spotlights.json
   def index
-    @spotlights = Spotlight.all
+    @spotlights = Spotlight.all.order(:id)
   end
 
   # GET /spotlights/1
@@ -75,6 +75,6 @@ class SpotlightsController < ApplicationController
     
     # Build out a sorted list of all gel colors to be used in the form select boxes
     def prepare_color_list
-      @colors = Color.all.order(:manufacturer,:gel_name)
+      @colors = Color.all.order(:manufacturer,:gel_num)
     end
 end

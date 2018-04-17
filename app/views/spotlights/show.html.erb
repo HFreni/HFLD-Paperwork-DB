@@ -1,29 +1,49 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Spotlight name:</strong>
-  <%= @spotlight.spotlight_name %>
-</p>
-
-<p>
-  <strong>Spotlight op fk:</strong>
-  <%= @spotlight.people.ids %>
-</p>
-
-<p>
-  <strong>Spotlight model fk:</strong>
-  <%= @spotlight.spotlight_models.ids %>
-</p>
-
-<p>
-  <strong>Spotlight notes:</strong>
-  <%= @spotlight.spotlight_notes %>
-</p>
-
-<p>
-  <strong>Spotlight position fk:</strong>
-  <%= @spotlight.spotlight_positions.ids %>
-</p>
-
-<%= link_to 'Edit', edit_spotlight_path(@spotlight) %> |
-<%= link_to 'Back', spotlights_path %>
+<section class="section">
+  <div class="container">
+    <p id="notice">
+      <%= notice %>
+    </p>
+    <h1 class="title">Spotlights</h1>
+    <div class="columns">
+        <div class="column has-text-centered">
+          <p class="title">
+            <%= @spotlight.spotlight_name %>
+          </p>
+          <p class="subtitle">
+            <%= @spotlight.people.ids %>
+          </p>
+          <%= image_tag("SpotOp.png") %>
+          <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>Frame Position</th>
+                <th>Color</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for color_frame in @spotlight.color_frames.order(:frame_position) %>
+                <tr>
+                  <th><%= color_frame.frame_position %></th>
+                  <th style="background-color: <%= color_frame.color.gel_hex %>;"><%= link_to color_frame.color.full_name, color_frame.color, style: "color: \##{foregound_color_for_luma color_frame.color.luma}" %></th>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <p class="subtitle"><%= @spotlight.spotlight_positions.ids %></p>
+          <p class="has-text-weight-bold spotNotes"><%= @spotlight.spotlight_notes %></p>
+          <p> For Debug Purposes:
+            <%= @spotlight.id %>
+          </p>
+          <br>
+          <div class="field is-grouped is-grouped-centered">
+            <p class="control">
+              <%= button_to 'Edit', edit_spotlight_path(@spotlight), :class => "button is-link", :method => :get %>
+            </p>
+            <p class="control">
+              <%= button_to 'Back', spotlights_path, :class => "button is-success", :method => :get  %>
+            </p>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
