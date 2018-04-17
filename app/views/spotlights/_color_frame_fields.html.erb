@@ -1,5 +1,11 @@
 <tr class="nested-fields">
-      <td><%= f.text_field :frame_position %></td>
-      <td><%= f.collection_select(:color_id, @colors, :id, :full_name, prompt: true) %></td>
-      <td><%= link_to_remove_association "remove frame", f %></td>
+      <div class="field">
+            <td><%= f.text_field :frame_position, :class => "input" %></td>
+      </div>
+      <div class="field">
+            <td><div class="select"><%= f.collection_select(:color_id, @colors, :id, :full_name, prompt: true) %></div></td>   
+      </div>
+      <div class="field">
+            <td><%= link_to_remove_association "remove frame", f, :class => "button is-danger" %></td>
+      </div>
 </tr>
