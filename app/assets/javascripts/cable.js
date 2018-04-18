@@ -5,9 +5,12 @@
 //= require_self
 //= require_tree ./channels
 
+// noinspection ThisExpressionReferencesGlobalObjectJS
 (function() {
   this.App || (this.App = {});
 
-  App.cable = ActionCable.createConsumer();
+  // noinspection ES6ModulesDependencies
+    // noinspection ES6ModulesDependencies
+    App.cable = ActionCable.createConsumer();
 
 }).call(this);

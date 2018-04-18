@@ -6,53 +6,54 @@
 
     <h1 class="title">Spotlights</h1>
     <div class="columns">
-      <% for spotlight in @spotlights %>
-        <div class="column has-text-centered">
-          <p class="title">
-            <%= spotlight.spotlight_name %>
-          </p>
-          <p class="subtitle">Spotlight Op: 
-            <%= spotlight.operator ? spotlight.operator.full_name  : "No Operator Assigned Yet" %>
-          </p>
-          <p class="subtitle">Spotlight Model: 
-            <%= spotlight.model ? spotlight.model.spotlight_name  : "No Model Assigned Yet" %>
-          </p>
-          <%= image_tag("SpotOp.png") %>
-          <table class="table is-fullwidth">
-            <thead>
-              <tr>
-                <th>Frame Position</th>
-                <th>Color</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% for color_frame in spotlight.color_frames.order(:frame_position) %>
-                <tr>
-                  <th><%= color_frame.frame_position %></th>
-                  <th style="background-color: <%= color_frame.color.gel_hex %>;"><%= link_to color_frame.color.full_name, color_frame.color, style: "color: \##{foregound_color_for_luma color_frame.color.luma}" %></th>
-                </tr>
-              <% end %>
-            </tbody>
-          </table>
-          <p class="subtitle">Spotlight Position: <%= spotlight.position ? spotlight.position.position_name   : "No Position Assigned Yet" %></p>
-          <p class="has-text-weight-bold spotNotes"><%= spotlight.spotlight_notes %></p>
-          <p> For Debug Purposes:
-            <%= spotlight.id %>
-          </p>
-          <br>
-          <div class="field is-grouped is-grouped-centered">
-            <p class="control">
-              <%= button_to 'Show', spotlight, :class => "button is-success", :method => :get  %>
+      <% @spotlights.each {|spotlight| %>
+      <div class="column has-text-centered">
+            <p class="title">
+              <%=  spotlight.spotlight_name  %>
             </p>
-            <p class="control">
-              <%= button_to 'Edit', edit_spotlight_path(spotlight), :class => "button is-link", :method => :get %>
-            </p>
-            <p class="control">
-              <%= button_to 'Destroy', spotlight, method: :delete,:class => "button is-danger", data: { confirm: 'Are you sure?' } %>
-            </p>
-          </div>
+        <p class="subtitle">Spotlight Op:
+              <%=  spotlight.operator ? spotlight.operator.full_name  : "No Operator Assigned Yet"  %>
+        </p>
+        <p class="subtitle">Spotlight Model:
+              <%=  spotlight.model ? spotlight.model.spotlight_name  : "No Model Assigned Yet"  %>
+        </p>
+        <%= image_tag("SpotOp.png") %>
+        <table class="table is-fullwidth">
+          <thead>
+          <tr>
+            <th>Frame Position</th>
+            <th>Color</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% spotlight.color_frames.order(:frame_position).each {|color_frame| %>
+          <tr>
+                  <th><%=  color_frame.frame_position  %></th>
+            <th style="background-color: <%= color_frame.color.gel_hex %>;"><%=  link_to color_frame.color.full_name, color_frame.color, style: "color: \##{foregound_color_for_luma color_frame.color.luma}"  %></th>
+          </tr>
+          <%  }  %>
+          </tbody>
+        </table>
+        <p class="subtitle">Spotlight
+          Position: <%=  spotlight.position ? spotlight.position.position_name   : "No Position Assigned Yet"  %></p>
+        <p class="has-text-weight-bold spotNotes"><%=  spotlight.spotlight_notes  %></p>
+        <p> For Debug Purposes:
+          <%= spotlight.id %>
+        </p>
+              <br>
+        <div class="field is-grouped is-grouped-centered">
+          <p class="control">
+            <%=  button_to 'Show', spotlight, :class => "button is-success", :method => :get %>
+          </p>
+          <p class="control">
+            <%=  button_to 'Edit', edit_spotlight_path(spotlight), :class => "button is-link", :method => :get  %>
+          </p>
+          <p class="control">
+            <%=  button_to 'Destroy', spotlight, method: :delete,:class => "button is-danger", data: {confirm: 'Are you sure?'} %>
+          </p>
         </div>
-        <% end %>
+      </div>
+      <%  } %>
       </div>
       <div class="field is-grouped is-grouped-centered">
         <p class="control">

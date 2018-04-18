@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# create colors table that contains all valid assignable gel colors
 class CreateColors < ActiveRecord::Migration[5.2]
   def change
     create_table :colors do |t|

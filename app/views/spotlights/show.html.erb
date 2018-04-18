@@ -24,12 +24,12 @@
               </tr>
             </thead>
             <tbody>
-              <% for color_frame in @spotlight.color_frames.order(:frame_position) %>
-                <tr>
-                  <th><%= color_frame.frame_position %></th>
-                  <th style="background-color: <%= color_frame.color.gel_hex %>;"><%= link_to color_frame.color.full_name, color_frame.color, style: "color: \##{foregound_color_for_luma color_frame.color.luma}" %></th>
-                </tr>
-              <% end %>
+              <% @spotlight.color_frames.order(:frame_position).each {|color_frame| %>
+            <tr>
+                  <th><%=  color_frame.frame_position  %></th>
+              <th style="background-color: <%= color_frame.color.gel_hex %>;"><%=  link_to color_frame.color.full_name, color_frame.color, style: "color: \##{foregound_color_for_luma color_frame.color.luma}"  %></th>
+            </tr>
+            <%  } %>
             </tbody>
           </table>
           <p class="subtitle">Spotlight Position: <%= @spotlight.position ? @spotlight.position.position_name  : "No Position Assigned Yet" %></p>

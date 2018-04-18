@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# create the master_cues table, i have no idea what this does
 class CreateMasterCues < ActiveRecord::Migration[5.2]
   def change
     create_table :master_cues do |t|

@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
+# noinspection ALL
 class SpotlightIntensitiesController < ApplicationController
-  before_action :set_spotlight_intensity, only: [:show, :edit, :update, :destroy]
+  before_action :set_spotlight_intensity, only: %i[show edit update destroy]
 
   # GET /spotlight_intensities
   # GET /spotlight_intensities.json
@@ -9,8 +12,7 @@ class SpotlightIntensitiesController < ApplicationController
 
   # GET /spotlight_intensities/1
   # GET /spotlight_intensities/1.json
-  def show
-  end
+  def show; end
 
   # GET /spotlight_intensities/new
   def new
@@ -18,8 +20,7 @@ class SpotlightIntensitiesController < ApplicationController
   end
 
   # GET /spotlight_intensities/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /spotlight_intensities
   # POST /spotlight_intensities.json
@@ -62,13 +63,14 @@ class SpotlightIntensitiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_spotlight_intensity
-      @spotlight_intensity = SpotlightIntensity.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def spotlight_intensity_params
-      params.require(:spotlight_intensity).permit(:name, :intensity)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_spotlight_intensity
+    @spotlight_intensity = SpotlightIntensity.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def spotlight_intensity_params
+    params.require(:spotlight_intensity).permit(:name, :intensity)
+  end
 end

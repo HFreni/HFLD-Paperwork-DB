@@ -86,13 +86,13 @@
       </thead>
       <tbody>
         <% form.fields_for :color_frames do |color_frame_form| %>
-          <% for color_frame in spotlight.color_frames %>
-            <tr>
-              <th><%= color_frame_form.text_field :id, multiple: true, :class => "input" %></th>
-              <th><%= color_frame.color.gel_num %></th>
-              <th style="background-color: <%= color_frame.color.gel_hex %> ;"><%= color_frame.color.gel_name %></th>
-            </tr>
-          <% end %>
+          <% spotlight.color_frames.each {|color_frame| %>
+      <tr>
+                <th><%=  color_frame_form.text_field :id, multiple: true, :class => "input" %></th>
+        <th><%=  color_frame.color.gel_num  %></th>
+        <th style="background-color: <%= color_frame.color.gel_hex %> ;"><%=  color_frame.color.gel_name  %></th>
+      </tr>
+      <%  } %>
         <% end %>
       </tbody>
     </table>

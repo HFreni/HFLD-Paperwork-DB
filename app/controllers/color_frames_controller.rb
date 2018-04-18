@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
+# noinspection ALL,RailsChecklist01
 class ColorFramesController < ApplicationController
-  before_action :set_color_frame, only: [:show, :edit, :update, :destroy]
+  before_action :set_color_frame, only: %i[show edit update destroy]
 
   # GET /color_frames
   # GET /color_frames.json
@@ -9,8 +12,7 @@ class ColorFramesController < ApplicationController
 
   # GET /color_frames/1
   # GET /color_frames/1.json
-  def show
-  end
+  def show; end
 
   # GET /color_frames/new
   def new
@@ -18,8 +20,7 @@ class ColorFramesController < ApplicationController
   end
 
   # GET /color_frames/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /color_frames
   # POST /color_frames.json
@@ -62,13 +63,14 @@ class ColorFramesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_color_frame
-      @color_frame = ColorFrame.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def color_frame_params
-      params.require(:color_frame).permit(:color_id, :spotlight_id, :frame_position)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_color_frame
+    @color_frame = ColorFrame.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def color_frame_params
+    params.require(:color_frame).permit(:color_id, :spotlight_id, :frame_position)
+  end
 end

@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# create spotlights table, a table that contains all spotlight objects
 class CreateSpotlights < ActiveRecord::Migration[5.2]
   def change
     create_table :spotlights do |t|
