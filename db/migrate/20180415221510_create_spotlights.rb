@@ -4,7 +4,7 @@ class CreateSpotlights < ActiveRecord::Migration[5.2]
       t.string :spotlight_name
       t.text :spotlight_notes
       t.references :operator
-      t.references :spotlight_model
+      t.references :model
       t.references :position
 
       t.timestamps

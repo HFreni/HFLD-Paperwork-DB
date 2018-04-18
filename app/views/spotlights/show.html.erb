@@ -9,8 +9,11 @@
           <p class="title">
             <%= @spotlight.spotlight_name %>
           </p>
-          <p class="subtitle">
+          <p class="subtitle">Spotlight Op: 
             <%= @spotlight.operator ? @spotlight.operator.full_name  : "No Operator Assigned Yet" %>
+          </p>
+          <p class="subtitle">Spotlight Model: 
+            <%= @spotlight.model ? @spotlight.model.spotlight_name  : "No Model Assigned Yet" %>
           </p>
           <%= image_tag("SpotOp.png") %>
           <table class="table is-fullwidth">
@@ -29,7 +32,7 @@
               <% end %>
             </tbody>
           </table>
-          <p class="subtitle"><%= @spotlight.position ? @spotlight.position.position_name  : "No Position Assigned Yet" %></p>
+          <p class="subtitle">Spotlight Position: <%= @spotlight.position ? @spotlight.position.position_name  : "No Position Assigned Yet" %></p>
           <p class="has-text-weight-bold spotNotes"><%= @spotlight.spotlight_notes %></p>
           <p> For Debug Purposes:
             <%= @spotlight.id %>
