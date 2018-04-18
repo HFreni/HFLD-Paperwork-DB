@@ -3,6 +3,7 @@ class SpotlightsController < ApplicationController
   before_action :prepare_color_list, only: [:new, :edit, :update]
   before_action :prepare_people_list, only: [:new, :edit, :update]
   before_action :prepare_position_list, only: [:new, :edit, :update]
+  before_action :prepare_model_list, only: [:new, :edit, :update]
 
   # GET /spotlights
   # GET /spotlights.json
@@ -72,7 +73,7 @@ class SpotlightsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def spotlight_params
-      params.require(:spotlight).permit(:spotlight_name, :operator_id, {spotlight_model_attributes: SpotlightModel.attribute_names.map(&:to_sym).push(:_destroy)}, :spotlight_notes, {spotlight_position_attributes: SpotlightPosition.attribute_names.map(&:to_sym).push(:_destroy)}, {color_frames_attributes: ColorFrame.attribute_names.map(&:to_sym).push(:_destroy)} )
+      params.require(:spotlight).permit(:spotlight_name, :operator_id, :position_id, :spotlight_notes, :model_id, {color_frames_attributes: ColorFrame.attribute_names.map(&:to_sym).push(:_destroy)} )
     end
     
     # Build out a sorted list of all gel colors to be used in the form select boxes
@@ -88,5 +89,10 @@ class SpotlightsController < ApplicationController
     # Build out a sorted list of all positions to be used in the form select boxes
     def prepare_position_list
       @position = SpotlightPosition.all.order(:id, :position_name)
+    end
+
+    # Build out a sorted list of all models to be used in the form select boxes
+    def prepare_model_list
+      @model = SpotlightModel.all.order(:id, :spotlight_name)
     end
 end

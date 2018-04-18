@@ -4,6 +4,7 @@ class Spotlight < ApplicationRecord
     
     belongs_to :operator, :class_name => "Person", optional: true
     belongs_to :position, :class_name => "SpotlightPosition", optional: true
+    belongs_to :model, :class_name => "SpotlightModel", optional: true
     has_many :spotlight_positions
     has_many :spotlight_models
     

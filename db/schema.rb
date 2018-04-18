@@ -136,13 +136,13 @@ ActiveRecord::Schema.define(version: 2018_04_17_215224) do
     t.string "spotlight_name"
     t.text "spotlight_notes"
     t.bigint "operator_id"
-    t.bigint "spotlight_model_id"
+    t.bigint "model_id"
     t.bigint "position_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["model_id"], name: "index_spotlights_on_model_id"
     t.index ["operator_id"], name: "index_spotlights_on_operator_id"
     t.index ["position_id"], name: "index_spotlights_on_position_id"
-    t.index ["spotlight_model_id"], name: "index_spotlights_on_spotlight_model_id"
   end
 
   add_foreign_key "color_frames", "colors"
