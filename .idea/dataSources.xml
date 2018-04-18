@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails HFLD-Design-Portal-V2: test" uuid="2f229e7f-4ca9-4e6d-b2bd-929e08229e2a">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://hfld-pmp-dev.cgwo5y1s401u.us-west-2.rds.amazonaws.com/hfld_pmp_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails HFLD-Design-Portal-V2: development" uuid="27b9579d-9cbc-4e0c-9750-09b6b5736f3a">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://hfld-pmp-dev.cgwo5y1s401u.us-west-2.rds.amazonaws.com/hfld_pmp_dev</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails HFLD-Design-Portal-V2: production" uuid="c7fd1e14-0dda-4eed-80a0-b114b6aa70b8">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://hfld-pmp-dev.cgwo5y1s401u.us-west-2.rds.amazonaws.com/hfld_pmp_prod</jdbc-url>
+    </data-source>
+  </component>
+</project>

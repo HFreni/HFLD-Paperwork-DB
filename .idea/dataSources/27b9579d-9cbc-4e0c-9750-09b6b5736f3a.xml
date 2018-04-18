@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Rails HFLD-Design-Portal-V2: development">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.8">
+    <root id="1">
+      <ServerVersion>10.1</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="hfld_pmp_dev">
+      <ObjectId>19751</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>13934</ObjectId>
+    </database>
+    <database id="4" parent="1" name="rdsadmin">
+      <ObjectId>16384</ObjectId>
+    </database>
+    <database id="5" parent="1" name="hfld_pmp_test">
+      <ObjectId>19752</ObjectId>
+    </database>
+    <role id="6" parent="1" name="DevTeam">
+      <ObjectId>16437</ObjectId>
+      <Inherit>1</Inherit>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="7" parent="1" name="HFLD">
+      <ObjectId>16388</ObjectId>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <ValidUntil>infinity</ValidUntil>
+    </role>
+    <role id="8" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="rds_replication">
+      <ObjectId>16387</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="14" parent="1" name="rds_superuser">
+      <ObjectId>16386</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="15" parent="1" name="rdsadmin">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <ValidUntil>infinity</ValidUntil>
+      <BypassRls>1</BypassRls>
+      <Config>log_statement=all
+log_min_error_statement=debug5
+log_min_messages=panic
+exit_on_error=0
+statement_timeout=0
+auto_explain.log_min_duration=-1
+TimeZone=utc
+pg_hint_plan.enable_hint=off
+default_transaction_read_only=off
+search_path=pg_catalog, public</Config>
+    </role>
+    <role id="16" parent="1" name="rdsrepladmin">
+      <ObjectId>16389</ObjectId>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <schema id="17" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-04-18.10:12:13.664</IntrospectionTimestamp>
+      <IntrospectionStateNumber>4821</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="18" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="19" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="20" parent="2" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+    </schema>
+    <schema id="21" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+    </schema>
+    <schema id="22" parent="2" name="information_schema">
+      <ObjectId>13643</ObjectId>
+    </schema>
+    <sequence id="23" parent="17" name="color_frames_id_seq">
+      <ObjectId>19795</ObjectId>
+      <StateNumber>4811</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="24" parent="17" name="colors_id_seq">
+      <ObjectId>19783</ObjectId>
+      <StateNumber>4810</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="25" parent="17" name="cue_master_cues_id_seq">
+      <ObjectId>19906</ObjectId>
+      <StateNumber>4820</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="26" parent="17" name="cue_spotlights_id_seq">
+      <ObjectId>19896</ObjectId>
+      <StateNumber>4819</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="27" parent="17" name="master_cues_id_seq">
+      <ObjectId>19849</ObjectId>
+      <StateNumber>4815</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="28" parent="17" name="people_id_seq">
+      <ObjectId>19838</ObjectId>
+      <StateNumber>4814</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="29" parent="17" name="spotlight_actions_id_seq">
+      <ObjectId>19860</ObjectId>
+      <StateNumber>4816</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="30" parent="17" name="spotlight_cues_id_seq">
+      <ObjectId>19916</ObjectId>
+      <StateNumber>4821</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="31" parent="17" name="spotlight_intensities_id_seq">
+      <ObjectId>19872</ObjectId>
+      <StateNumber>4817</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="32" parent="17" name="spotlight_models_id_seq">
+      <ObjectId>19815</ObjectId>
+      <StateNumber>4812</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="33" parent="17" name="spotlight_positions_id_seq">
+      <ObjectId>19827</ObjectId>
+      <StateNumber>4813</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="34" parent="17" name="spotlight_sizes_id_seq">
+      <ObjectId>19884</ObjectId>
+      <StateNumber>4818</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="35" parent="17" name="spotlights_id_seq">
+      <ObjectId>19769</ObjectId>
+      <StateNumber>4808</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="36" parent="17" name="ar_internal_metadata">
+      <ObjectId>19761</ObjectId>
+      <StateNumber>4807</StateNumber>
+    </table>
+    <table id="37" parent="17" name="color_frames">
+      <ObjectId>19797</ObjectId>
+      <StateNumber>4811</StateNumber>
+    </table>
+    <table id="38" parent="17" name="colors">
+      <ObjectId>19785</ObjectId>
+      <StateNumber>4821</StateNumber>
+    </table>
+    <table id="39" parent="17" name="cue_master_cues">
+      <ObjectId>19908</ObjectId>
+      <StateNumber>4820</StateNumber>
+    </table>
+    <table id="40" parent="17" name="cue_spotlights">
+      <ObjectId>19898</ObjectId>
+      <StateNumber>4819</StateNumber>
+    </table>
+    <table id="41" parent="17" name="master_cues">
+      <ObjectId>19851</ObjectId>
+      <StateNumber>4815</StateNumber>
+    </table>
+    <table id="42" parent="17" name="people">
+      <ObjectId>19840</ObjectId>
+      <StateNumber>4814</StateNumber>
+    </table>
+    <table id="43" parent="17" name="schema_migrations">
+      <ObjectId>19753</ObjectId>
+      <StateNumber>4806</StateNumber>
+    </table>
+    <table id="44" parent="17" name="spotlight_actions">
+      <ObjectId>19862</ObjectId>
+      <StateNumber>4821</StateNumber>
+    </table>
+    <table id="45" parent="17" name="spotlight_cues">
+      <ObjectId>19918</ObjectId>
+      <StateNumber>4821</StateNumber>
+    </table>
+    <table id="46" parent="17" name="spotlight_intensities">
+      <ObjectId>19874</ObjectId>
+      <StateNumber>4821</StateNumber>
+    </table>
+    <table id="47" parent="17" name="spotlight_models">
+      <ObjectId>19817</ObjectId>
+      <StateNumber>4812</StateNumber>
+    </table>
+    <table id="48" parent="17" name="spotlight_positions">
+      <ObjectId>19829</ObjectId>
+      <StateNumber>4813</StateNumber>
+    </table>
+    <table id="49" parent="17" name="spotlight_sizes">
+      <ObjectId>19886</ObjectId>
+      <StateNumber>4821</StateNumber>
+    </table>
+    <table id="50" parent="17" name="spotlights">
+      <ObjectId>19771</ObjectId>
+      <StateNumber>4811</StateNumber>
+    </table>
+    <column id="51" parent="36" name="key">
+      <Position>1</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4807</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="52" parent="36" name="value">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>4807</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="53" parent="36" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4807</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="54" parent="36" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4807</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="55" parent="36" name="ar_internal_metadata_pkey">
+      <ObjectId>19767</ObjectId>
+      <ColNames>key</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="56" parent="36" name="ar_internal_metadata_pkey">
+      <ObjectId>19768</ObjectId>
+      <ColNames>key</ColNames>
+      <UnderlyingIndexName>ar_internal_metadata_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="57" parent="37" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4811</StateNumber>
+      <DefaultExpression>nextval(&apos;color_frames_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>color_frames_id_seq</SequenceName>
+    </column>
+    <column id="58" parent="37" name="color_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4811</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="59" parent="37" name="spotlight_id">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4811</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="60" parent="37" name="frame_position">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>4811</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="61" parent="37" name="created_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4811</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="62" parent="37" name="updated_at">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4811</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="63" parent="37" name="color_frames_pkey">
+      <ObjectId>19801</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="64" parent="37" name="index_color_frames_on_color_id">
+      <ObjectId>19813</ObjectId>
+      <ColNames>color_id</ColNames>
+    </index>
+    <index id="65" parent="37" name="index_color_frames_on_spotlight_id">
+      <ObjectId>19814</ObjectId>
+      <ColNames>spotlight_id</ColNames>
+    </index>
+    <key id="66" parent="37" name="color_frames_pkey">
+      <ObjectId>19802</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>color_frames_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="67" parent="37" name="fk_rails_ba9d72d27e">
+      <ObjectId>19803</ObjectId>
+      <ColNames>color_id</ColNames>
+      <RefTableId>19785</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>colors</RefTableName>
+      <RefKeyName>colors_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="68" parent="37" name="fk_rails_f93134f04e">
+      <ObjectId>19808</ObjectId>
+      <ColNames>spotlight_id</ColNames>
+      <RefTableId>19771</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>spotlights</RefTableName>
+      <RefKeyName>spotlights_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="69" parent="38" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4810</StateNumber>
+      <DefaultExpression>nextval(&apos;colors_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>colors_id_seq</SequenceName>
+    </column>
+    <column id="70" parent="38" name="gel_num">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>4810</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="71" parent="38" name="gel_name">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>4810</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="72" parent="38" name="gel_hex">
+      <Position>4</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>4810</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="73" parent="38" name="manufacturer_id">
+      <Position>5</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4810</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="74" parent="38" name="created_at">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4810</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="75" parent="38" name="updated_at">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4810</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="76" parent="38" name="colors_pkey">
+      <ObjectId>19792</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="77" parent="38" name="index_colors_on_manufacturer_id">
+      <ObjectId>19794</ObjectId>
+      <ColNames>manufacturer_id</ColNames>
+    </index>
+    <key id="78" parent="38" name="colors_pkey">
+      <ObjectId>19793</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>colors_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="79" parent="39" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4820</StateNumber>
+      <DefaultExpression>nextval(&apos;cue_master_cues_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>cue_master_cues_id_seq</SequenceName>
+    </column>
+    <column id="80" parent="39" name="master_cue_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4820</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="81" parent="39" name="cue_spotlight_id">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4820</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="82" parent="39" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4820</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="83" parent="39" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4820</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="84" parent="39" name="cue_master_cues_pkey">
+      <ObjectId>19912</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="85" parent="39" name="index_cue_master_cues_on_master_cue_id">
+      <ObjectId>19914</ObjectId>
+      <ColNames>master_cue_id</ColNames>
+    </index>
+    <index id="86" parent="39" name="index_cue_master_cues_on_cue_spotlight_id">
+      <ObjectId>19915</ObjectId>
+      <ColNames>cue_spotlight_id</ColNames>
+    </index>
+    <key id="87" parent="39" name="cue_master_cues_pkey">
+      <ObjectId>19913</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>cue_master_cues_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="88" parent="40" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4819</StateNumber>
+      <DefaultExpression>nextval(&apos;cue_spotlights_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>cue_spotlights_id_seq</SequenceName>
+    </column>
+    <column id="89" parent="40" name="spotlight_cue_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4819</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="90" parent="40" name="spotlight_id">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4819</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="91" parent="40" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4819</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="92" parent="40" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4819</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="93" parent="40" name="cue_spotlights_pkey">
+      <ObjectId>19902</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="94" parent="40" name="index_cue_spotlights_on_spotlight_cue_id">
+      <ObjectId>19904</ObjectId>
+      <ColNames>spotlight_cue_id</ColNames>
+    </index>
+    <index id="95" parent="40" name="index_cue_spotlights_on_spotlight_id">
+      <ObjectId>19905</ObjectId>
+      <ColNames>spotlight_id</ColNames>
+    </index>
+    <key id="96" parent="40" name="cue_spotlights_pkey">
+      <ObjectId>19903</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>cue_spotlights_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="97" parent="41" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4815</StateNumber>
+      <DefaultExpression>nextval(&apos;master_cues_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>master_cues_id_seq</SequenceName>
+    </column>
+    <column id="98" parent="41" name="lx_cue">
+      <Position>2</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>4815</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="99" parent="41" name="spot_cue">
+      <Position>3</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>4815</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="100" parent="41" name="cue_info">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>4815</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="101" parent="41" name="scene">
+      <Position>5</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>4815</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="102" parent="41" name="song">
+      <Position>6</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>4815</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="103" parent="41" name="created_at">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4815</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="104" parent="41" name="updated_at">
+      <Position>8</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4815</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="105" parent="41" name="master_cues_pkey">
+      <ObjectId>19858</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="106" parent="41" name="master_cues_pkey">
+      <ObjectId>19859</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>master_cues_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="107" parent="42" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4814</StateNumber>
+      <DefaultExpression>nextval(&apos;people_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>people_id_seq</SequenceName>
+    </column>
+    <column id="108" parent="42" name="person_fname">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>4814</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="109" parent="42" name="person_lname">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>4814</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="110" parent="42" name="person_email">
+      <Position>4</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>4814</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="111" parent="42" name="person_phone">
+      <Position>5</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>4814</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="112" parent="42" name="created_at">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4814</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="113" parent="42" name="updated_at">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4814</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="114" parent="42" name="people_pkey">
+      <ObjectId>19847</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="115" parent="42" name="people_pkey">
+      <ObjectId>19848</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>people_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="116" parent="43" name="version">
+      <Position>1</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4806</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="117" parent="43" name="schema_migrations_pkey">
+      <ObjectId>19759</ObjectId>
+      <ColNames>version</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="118" parent="43" name="schema_migrations_pkey">
+      <ObjectId>19760</ObjectId>
+      <ColNames>version</ColNames>
+      <UnderlyingIndexName>schema_migrations_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="119" parent="44" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4816</StateNumber>
+      <DefaultExpression>nextval(&apos;spotlight_actions_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>spotlight_actions_id_seq</SequenceName>
+    </column>
+    <column id="120" parent="44" name="spotlight_cue_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4816</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="121" parent="44" name="name">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>4816</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="122" parent="44" name="description">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>4816</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="123" parent="44" name="image">
+      <Position>5</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>4816</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="124" parent="44" name="created_at">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4816</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="125" parent="44" name="updated_at">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4816</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="126" parent="44" name="spotlight_actions_pkey">
+      <ObjectId>19869</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="127" parent="44" name="index_spotlight_actions_on_spotlight_cue_id">
+      <ObjectId>19871</ObjectId>
+      <ColNames>spotlight_cue_id</ColNames>
+    </index>
+    <key id="128" parent="44" name="spotlight_actions_pkey">
+      <ObjectId>19870</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>spotlight_actions_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="129" parent="45" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4821</StateNumber>
+      <DefaultExpression>nextval(&apos;spotlight_cues_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>spotlight_cues_id_seq</SequenceName>
+    </column>
+    <column id="130" parent="45" name="color_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4821</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="131" parent="45" name="spotlight_size_id">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4821</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="132" parent="45" name="spotlight_intensity_id">
+      <Position>4</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4821</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="133" parent="45" name="spotlight_action_id">
+      <Position>5</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4821</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="134" parent="45" name="time">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>4821</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="135" parent="45" name="description">
+      <Position>7</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>4821</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="136" parent="45" name="created_at">
+      <Position>8</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4821</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="137" parent="45" name="updated_at">
+      <Position>9</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4821</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="138" parent="45" name="spotlight_cues_pkey">
+      <ObjectId>19925</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="139" parent="45" name="index_spotlight_cues_on_color_id">
+      <ObjectId>19947</ObjectId>
+      <ColNames>color_id</ColNames>
+    </index>
+    <index id="140" parent="45" name="index_spotlight_cues_on_spotlight_size_id">
+      <ObjectId>19948</ObjectId>
+      <ColNames>spotlight_size_id</ColNames>
+    </index>
+    <index id="141" parent="45" name="index_spotlight_cues_on_spotlight_intensity_id">
+      <ObjectId>19949</ObjectId>
+      <ColNames>spotlight_intensity_id</ColNames>
+    </index>
+    <index id="142" parent="45" name="index_spotlight_cues_on_spotlight_action_id">
+      <ObjectId>19950</ObjectId>
+      <ColNames>spotlight_action_id</ColNames>
+    </index>
+    <key id="143" parent="45" name="spotlight_cues_pkey">
+      <ObjectId>19926</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>spotlight_cues_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="144" parent="45" name="fk_rails_f1ac3d7496">
+      <ObjectId>19927</ObjectId>
+      <ColNames>color_id</ColNames>
+      <RefTableId>19785</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>colors</RefTableName>
+      <RefKeyName>colors_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="145" parent="45" name="fk_rails_f94eba4d2c">
+      <ObjectId>19932</ObjectId>
+      <ColNames>spotlight_size_id</ColNames>
+      <RefTableId>19886</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>spotlight_sizes</RefTableName>
+      <RefKeyName>spotlight_sizes_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="146" parent="45" name="fk_rails_be69c2ed7f">
+      <ObjectId>19937</ObjectId>
+      <ColNames>spotlight_intensity_id</ColNames>
+      <RefTableId>19874</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>spotlight_intensities</RefTableName>
+      <RefKeyName>spotlight_intensities_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="147" parent="45" name="fk_rails_d0b32fba3c">
+      <ObjectId>19942</ObjectId>
+      <ColNames>spotlight_action_id</ColNames>
+      <RefTableId>19862</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>spotlight_actions</RefTableName>
+      <RefKeyName>spotlight_actions_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="148" parent="46" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4817</StateNumber>
+      <DefaultExpression>nextval(&apos;spotlight_intensities_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>spotlight_intensities_id_seq</SequenceName>
+    </column>
+    <column id="149" parent="46" name="spotlight_cue_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4817</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="150" parent="46" name="name">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>4817</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="151" parent="46" name="description">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>4817</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="152" parent="46" name="intensity">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>4817</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="153" parent="46" name="created_at">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4817</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="154" parent="46" name="updated_at">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4817</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="155" parent="46" name="spotlight_intensities_pkey">
+      <ObjectId>19881</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="156" parent="46" name="index_spotlight_intensities_on_spotlight_cue_id">
+      <ObjectId>19883</ObjectId>
+      <ColNames>spotlight_cue_id</ColNames>
+    </index>
+    <key id="157" parent="46" name="spotlight_intensities_pkey">
+      <ObjectId>19882</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>spotlight_intensities_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="158" parent="47" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4812</StateNumber>
+      <DefaultExpression>nextval(&apos;spotlight_models_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>spotlight_models_id_seq</SequenceName>
+    </column>
+    <column id="159" parent="47" name="spotlight_name">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>4812</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="160" parent="47" name="spotlight_weight">
+      <Position>3</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>4812</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="161" parent="47" name="manufacturer_id">
+      <Position>4</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4812</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="162" parent="47" name="created_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4812</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="163" parent="47" name="updated_at">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4812</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="164" parent="47" name="spotlight_models_pkey">
+      <ObjectId>19824</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="165" parent="47" name="index_spotlight_models_on_manufacturer_id">
+      <ObjectId>19826</ObjectId>
+      <ColNames>manufacturer_id</ColNames>
+    </index>
+    <key id="166" parent="47" name="spotlight_models_pkey">
+      <ObjectId>19825</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>spotlight_models_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="167" parent="48" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4813</StateNumber>
+      <DefaultExpression>nextval(&apos;spotlight_positions_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>spotlight_positions_id_seq</SequenceName>
+    </column>
+    <column id="168" parent="48" name="position_name">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>4813</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="169" parent="48" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4813</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="170" parent="48" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4813</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="171" parent="48" name="spotlight_positions_pkey">
+      <ObjectId>19836</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="172" parent="48" name="spotlight_positions_pkey">
+      <ObjectId>19837</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>spotlight_positions_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="173" parent="49" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4818</StateNumber>
+      <DefaultExpression>nextval(&apos;spotlight_sizes_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>spotlight_sizes_id_seq</SequenceName>
+    </column>
+    <column id="174" parent="49" name="spotlight_cue_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4818</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="175" parent="49" name="name">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>4818</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="176" parent="49" name="description">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>4818</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="177" parent="49" name="image">
+      <Position>5</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>4818</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="178" parent="49" name="created_at">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4818</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="179" parent="49" name="updated_at">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4818</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="180" parent="49" name="spotlight_sizes_pkey">
+      <ObjectId>19893</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="181" parent="49" name="index_spotlight_sizes_on_spotlight_cue_id">
+      <ObjectId>19895</ObjectId>
+      <ColNames>spotlight_cue_id</ColNames>
+    </index>
+    <key id="182" parent="49" name="spotlight_sizes_pkey">
+      <ObjectId>19894</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>spotlight_sizes_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="183" parent="50" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4808</StateNumber>
+      <DefaultExpression>nextval(&apos;spotlights_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>spotlights_id_seq</SequenceName>
+    </column>
+    <column id="184" parent="50" name="spotlight_name">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>4808</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="185" parent="50" name="spotlight_notes">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>4808</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="186" parent="50" name="operator_id">
+      <Position>4</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4808</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="187" parent="50" name="model_id">
+      <Position>5</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4808</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="188" parent="50" name="position_id">
+      <Position>6</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>4808</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="189" parent="50" name="created_at">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4808</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="190" parent="50" name="updated_at">
+      <Position>8</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>4808</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="191" parent="50" name="spotlights_pkey">
+      <ObjectId>19778</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="192" parent="50" name="index_spotlights_on_operator_id">
+      <ObjectId>19780</ObjectId>
+      <ColNames>operator_id</ColNames>
+    </index>
+    <index id="193" parent="50" name="index_spotlights_on_model_id">
+      <ObjectId>19781</ObjectId>
+      <ColNames>model_id</ColNames>
+    </index>
+    <index id="194" parent="50" name="index_spotlights_on_position_id">
+      <ObjectId>19782</ObjectId>
+      <ColNames>position_id</ColNames>
+    </index>
+    <key id="195" parent="50" name="spotlights_pkey">
+      <ObjectId>19779</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>spotlights_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
