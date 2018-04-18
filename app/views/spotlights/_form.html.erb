@@ -32,7 +32,7 @@
 
   <div class="field">
     <%= f.label :spotlight_position, :class => "label"  %>
-    <%= f.collection_select(:position_id, @people, :id, :full_name, prompt: true) %>
+    <%= f.collection_select(:position_id, @spotlight_position, :id, :name, prompt: true) %>
   </div>
 
   <p class="subtitle"> Color Frames</p>
