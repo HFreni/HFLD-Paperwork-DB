@@ -71,6 +71,6 @@ class ColorsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def color_params
-    params.require(:color).permit(:gel_num, :gel_name, :gel_hex, :manufacturer)
+    params.require(:color).permit(:gel_num, :gel_name, :gel_hex, :manufacturer_id)
   end
 end
