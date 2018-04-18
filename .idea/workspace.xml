@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a08abbe5-9e37-4761-9178-5cdaea1a1f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/cue_spotlights_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/cue_spotlights_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/cues_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/cues_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/cue.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/cue.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/cue_spotlight.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/cue_spotlight.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/spotlight.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/spotlight.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/spotlight_intensity.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/cues/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cues/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cue_spotlights/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cue_spotlights/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/cues/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cues/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20180417213020_create_cue_spotlights.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180417213020_create_cue_spotlights.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -36,16 +27,37 @@
         <entry file="file://$PROJECT_DIR$/app/views/spotlights/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/cues/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/spotlight_cues/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" selection-start-line="20" selection-end-line="25" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/cues/index.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/cue_spotlights/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+            <state relative-caret-position="450">
+              <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -54,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/app/models/spotlight.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+              <caret line="6" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -62,8 +74,8 @@
       <file leaf-file-name="cue_spotlight.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/cue_spotlight.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+            <state relative-caret-position="30">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -71,8 +83,8 @@
       <file leaf-file-name="cue.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/cue.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="60">
+              <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -80,8 +92,8 @@
       <file leaf-file-name="schema.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/schema.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="44" column="23" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="23" />
+            <state relative-caret-position="379">
+              <caret line="37" selection-start-line="37" selection-end-line="51" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -99,7 +111,7 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/cue_spotlights_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="521">
-              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
             </state>
           </provider>
         </entry>
@@ -154,6 +166,7 @@
         <option value="$PROJECT_DIR$/app/controllers/cue_spotlights_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/spotlight.rb" />
         <option value="$PROJECT_DIR$/app/views/cues/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/cue_spotlights/index.html.erb" />
       </list>
     </option>
   </component>
@@ -222,7 +235,14 @@
               <item name="HFLD-Design-Portal-V2" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="spotlights" type="462c0819:PsiDirectoryNode" />
+              <item name="cue_spotlights" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HFLD-Design-Portal-V2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HFLD-Design-Portal-V2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="spotlight_cues" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HFLD-Design-Portal-V2" type="b2602c69:ProjectViewProjectNode" />
@@ -365,12 +385,12 @@
       <updated>1524023914675</updated>
       <workItem from="1524023916874" duration="2202000" />
       <workItem from="1524061549331" duration="1134000" />
-      <workItem from="1524071286604" duration="7736000" />
+      <workItem from="1524071286604" duration="8522000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8475000" />
+    <option name="totallyTimeSpent" value="9261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2560" y="23" width="2560" height="1417" extended-state="6" />
@@ -404,184 +424,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://RailsDependency/Color">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>RailsDependency</ID>
-          <OriginalElement>Color</OriginalElement>
-          <nodes>
-            <node x="226.08555226824456" y="131.0">SpotlightIntensity</node>
-            <node x="1358.3355522682446" y="131.0">SpotlightAction</node>
-            <node x="733.0855522682447" y="120.0">Person</node>
-            <node x="389.08555226824467" y="131.0">SpotlightSize</node>
-            <node x="576.5855522682447" y="401.0">ColorFrame</node>
-            <node x="607.5855522682447" y="222.0">Spotlight</node>
-            <node x="0.0" y="120.0">MasterCue</node>
-            <node x="1182.0855522682446" y="244.0">SpotlightCue</node>
-            <node x="1141.0855522682446" y="120.0">Color</node>
-            <node x="1182.0855522682446" y="390.0">CueSpotlight</node>
-            <node x="525.0855522682447" y="120.0">SpotlightModel</node>
-            <node x="106.7368096646943" y="536.0">CueMasterCue</node>
-            <node x="907.0855522682447" y="120.0">SpotlightPosition</node>
-            <node x="540.5438856015779" y="0.0">ApplicationRecord</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="CueMasterCue" target="ApplicationRecord">
-              <point x="0.0" y="-37.0" />
-              <point x="217.2368096646943" y="511.0" />
-              <point x="204.5" y="511.0" />
-              <point x="204.5" y="60.0" />
-              <point x="557.3900394477317" y="60.0" />
-              <point x="-56.15384615384619" y="15.0" />
-            </edge>
-            <edge source="Spotlight" target="Person">
-              <point x="26.75" y="-59.0" />
-              <point x="741.3355522682447" y="192.0" />
-              <point x="810.0855522682447" y="192.0" />
-              <point x="0.0" y="26.0" />
-            </edge>
-            <edge source="SpotlightPosition" target="ApplicationRecord">
-              <point x="0.0" y="-26.0" />
-              <point x="1014.0855522682447" y="90.0" />
-              <point x="636.0054240631164" y="90.0" />
-              <point x="22.461538461538453" y="15.0" />
-            </edge>
-            <edge source="SpotlightModel" target="ApplicationRecord">
-              <point x="0.0" y="-26.0" />
-              <point x="619.0855522682447" y="100.0" />
-              <point x="613.5438856015779" y="100.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="Spotlight" target="SpotlightPosition">
-              <point x="80.25" y="-59.0" />
-              <point x="794.8355522682447" y="202.0" />
-              <point x="1014.0855522682447" y="202.0" />
-              <point x="0.0" y="26.0" />
-            </edge>
-            <edge source="ColorFrame" target="ApplicationRecord">
-              <point x="-56.33333333333326" y="-37.0" />
-              <point x="604.7522189349114" y="370.0" />
-              <point x="215.58555226824456" y="370.0" />
-              <point x="215.58555226824456" y="70.0" />
-              <point x="568.620808678501" y="70.0" />
-              <point x="-44.923076923076906" y="15.0" />
-            </edge>
-            <edge source="Spotlight" target="ApplicationRecord">
-              <point x="-80.25" y="-59.0" />
-              <point x="634.3355522682447" y="202.0" />
-              <point x="514.5855522682447" y="202.0" />
-              <point x="514.5855522682447" y="100.0" />
-              <point x="602.3131163708088" y="100.0" />
-              <point x="-11.23076923076917" y="15.0" />
-            </edge>
-            <edge source="SpotlightCue" target="ApplicationRecord">
-              <point x="55.25" y="-37.0" />
-              <point x="1347.8355522682446" y="70.0" />
-              <point x="658.4669625246548" y="70.0" />
-              <point x="44.923076923076906" y="15.0" />
-            </edge>
-            <edge source="SpotlightAction" target="ApplicationRecord">
-              <point x="0.0" y="-15.0" />
-              <point x="1423.3355522682446" y="60.0" />
-              <point x="669.6977317554241" y="60.0" />
-              <point x="56.15384615384619" y="15.0" />
-            </edge>
-            <edge source="Color" target="ApplicationRecord">
-              <point x="0.0" y="-26.0" />
-              <point x="1202.0855522682446" y="80.0" />
-              <point x="647.2361932938857" y="80.0" />
-              <point x="33.692307692307736" y="15.0" />
-            </edge>
-            <edge source="CueMasterCue" target="CueSpotlight">
-              <point x="73.66666666666669" y="-37.0" />
-              <point x="290.903476331361" y="511.0" />
-              <point x="1292.5855522682446" y="511.0" />
-              <point x="0.0" y="48.0" />
-            </edge>
-            <edge source="CueMasterCue" target="MasterCue">
-              <point x="-73.66666666666674" y="-37.0" />
-              <point x="143.57014299802756" y="511.0" />
-              <point x="97.0" y="511.0" />
-              <point x="0.0" y="26.0" />
-            </edge>
-            <edge source="Spotlight" target="SpotlightModel">
-              <point x="-26.75" y="-59.0" />
-              <point x="687.8355522682447" y="192.0" />
-              <point x="619.0855522682447" y="192.0" />
-              <point x="0.0" y="26.0" />
-            </edge>
-            <edge source="CueSpotlight" target="SpotlightCue">
-              <point x="0.0" y="-48.0" />
-              <point x="0.0" y="37.0" />
-            </edge>
-            <edge source="ColorFrame" target="Spotlight">
-              <point x="0.0" y="-37.0" />
-              <point x="-53.5" y="59.0" />
-            </edge>
-            <edge source="CueSpotlight" target="Spotlight">
-              <point x="-73.66666666666663" y="-48.0" />
-              <point x="1218.918885601578" y="360.0" />
-              <point x="768.0855522682447" y="360.0" />
-              <point x="53.5" y="59.0" />
-            </edge>
-            <edge source="SpotlightSize" target="ApplicationRecord">
-              <point x="0.0" y="-15.0" />
-              <point x="446.58555226824467" y="90.0" />
-              <point x="591.0823471400395" y="90.0" />
-              <point x="-22.461538461538453" y="15.0" />
-            </edge>
-            <edge source="Person" target="ApplicationRecord">
-              <point x="0.0" y="-26.0" />
-              <point x="810.0855522682447" y="100.0" />
-              <point x="624.7746548323472" y="100.0" />
-              <point x="11.230769230769283" y="15.0" />
-            </edge>
-            <edge source="SpotlightCue" target="Color">
-              <point x="-55.25" y="-37.0" />
-              <point x="1237.3355522682446" y="202.0" />
-              <point x="1232.5855522682446" y="202.0" />
-              <point x="30.5" y="26.0" />
-            </edge>
-            <edge source="MasterCue" target="ApplicationRecord">
-              <point x="0.0" y="-26.0" />
-              <point x="97.0" y="50.0" />
-              <point x="546.1592702169626" y="50.0" />
-              <point x="-67.38461538461536" y="15.0" />
-            </edge>
-            <edge source="CueSpotlight" target="ApplicationRecord">
-              <point x="73.66666666666663" y="-48.0" />
-              <point x="1366.2522189349113" y="370.0" />
-              <point x="1498.8355522682446" y="370.0" />
-              <point x="1498.8355522682446" y="50.0" />
-              <point x="680.9285009861933" y="50.0" />
-              <point x="67.38461538461536" y="15.0" />
-            </edge>
-            <edge source="SpotlightIntensity" target="ApplicationRecord">
-              <point x="0.0" y="-15.0" />
-              <point x="297.58555226824456" y="80.0" />
-              <point x="579.8515779092702" y="80.0" />
-              <point x="-33.692307692307736" y="15.0" />
-            </edge>
-            <edge source="ColorFrame" target="Color">
-              <point x="56.33333333333326" y="-37.0" />
-              <point x="717.4188856015779" y="370.0" />
-              <point x="1171.5855522682446" y="370.0" />
-              <point x="-30.5" y="26.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-143.0" y="122.5" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Association fields</Category>
-            <Category>Migration fields</Category>
-          </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180417213058_create_cue_master_cues.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20180417215224_create_spotlight_cues.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -945,20 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/cues_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="44" column="23" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/spotlights_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -969,42 +797,73 @@
     <entry file="file://$PROJECT_DIR$/app/views/spotlights/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/cue_spotlight.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/cue.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/spotlight.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/cue_spotlights_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="521">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="37" selection-start-line="37" selection-end-line="51" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/cues_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/cue_spotlight.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/cue.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/spotlight.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/cues/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+        <state relative-caret-position="135">
+          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/spotlight_cues/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="25" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cue_spotlights/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
         </state>
       </provider>
     </entry>

@@ -14,8 +14,12 @@
   <tbody>
     <% @cue_spotlights.each do |cue_spotlight| %>
       <tr>
-        <td><%= cue_spotlight.references %></td>
-        <td><%= cue_spotlight.references %></td>
+        <td><%= cue_spotlight.color %></td>
+        <td><%= cue_spotlight.size %></td>
+        <td><%= cue_spotlight.intensity %></td>
+        <td><%= cue_spotlight.action %></td>
+        <td><%= cue_spotlight.time %></td>
+        <td><%= cue_spotlight.description %></td>
         <td><%= link_to 'Show', cue_spotlight %></td>
         <td><%= link_to 'Edit', edit_cue_spotlight_path(cue_spotlight) %></td>
         <td><%= link_to 'Destroy', cue_spotlight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
