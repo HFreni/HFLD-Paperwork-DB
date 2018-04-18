@@ -7,8 +7,8 @@ class CreateCueSpotlights < ActiveRecord::Migration[5.2]
       t.references :cue, foreign_key: true
       t.references :spotlight, foreign_key: true
       t.references :size
-      t.references :intensity
       t.references :action
+      t.integer :intensity
       t.integer :time
       t.text :description
       

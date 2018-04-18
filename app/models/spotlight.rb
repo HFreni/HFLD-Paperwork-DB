@@ -4,6 +4,7 @@
 class Spotlight < ApplicationRecord
   has_many :color_frames, dependent: :destroy, inverse_of: :spotlight
   has_many :colors, through: :color_frames
+
   has_many :cue_spotlights, dependent: :destroy, inverse_of: :spotlight
   has_many :cues, through: :cue_spotlights
 

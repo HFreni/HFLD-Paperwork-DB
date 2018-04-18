@@ -13,7 +13,6 @@
               <th>Cue info</th>
               <th>Scene</th>
               <th>Song</th>
-              <th>Intensity</th>
               <th colspan="3"></th>
             </tr>
           </thead>
@@ -26,7 +25,6 @@
                 <td><%= cue.cue_info %></td>
                 <td><%= cue.scene %></td>
                 <td><%= cue.song %></td>
-                <td><%= cue.intensity ? cue.intensity.name : "No Intensity Assigned Yet" %> </td>
                 <td><%= link_to 'Show', cue %></td>
                 <td><%= link_to 'Edit', edit_cue_path(cue) %></td>
                 <td><%= link_to 'Destroy', cue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -38,6 +36,34 @@
 
         <%= link_to 'New Cue', new_cue_path %>
       </div>
+      <% @cues.cue_spotlights.each do |subcue| %>
+        <div class="column has-text-centered">
+          <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Color TBD</th>
+                <th>Size</th>
+                <th>Intensity</th>
+                <th>Action</th>
+                <th>Time</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><%= subcue.id %></td>
+                <td>Color TBD</td>
+                <td><%= subcue.size_id %></td>
+                <td><%= subcue.intensity %></td>
+                <td><%= subcue.action_id %></td>
+                <td><%= subcue.time %></td>
+                <td><%= subcue.description %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      <% end %>
 
     </div>
   </div>

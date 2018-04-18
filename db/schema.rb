@@ -39,15 +39,14 @@ ActiveRecord::Schema.define(version: 2018_04_17_213020) do
     t.bigint "cue_id"
     t.bigint "spotlight_id"
     t.bigint "size_id"
-    t.bigint "intensity_id"
     t.bigint "action_id"
+    t.integer "intensity"
     t.integer "time"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["action_id"], name: "index_cue_spotlights_on_action_id"
     t.index ["cue_id"], name: "index_cue_spotlights_on_cue_id"
-    t.index ["intensity_id"], name: "index_cue_spotlights_on_intensity_id"
     t.index ["size_id"], name: "index_cue_spotlights_on_size_id"
     t.index ["spotlight_id"], name: "index_cue_spotlights_on_spotlight_id"
   end

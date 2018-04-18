@@ -3,6 +3,8 @@
 # noinspection ALL
 class CueSpotlightsController < ApplicationController
   before_action :set_cue_spotlight, only: %i[show edit update destroy]
+  before_action :prepare_size_list, only: %i[new edit update]
+  before_action :prepare_action_list, only: %i[new edit update]
 
   # GET /cue_spotlights
   # GET /cue_spotlights.json
@@ -72,5 +74,15 @@ class CueSpotlightsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def cue_spotlight_params
     params.require(:cue_spotlight).permit(:cue, :spotlight, :spotlight_size, :spotlight_intensity, :spotlight_action, :time, :description)
+  end
+
+  # Build out a sorted list of all gel colors to be used in the form select boxes
+  def prepare_size_list
+    @sizes = SpotlightSize.all.order(:id, :name)
+  end
+
+  # Build out a sorted list of all actions to be used in the form select boxes
+  def prepare_action_list
+    @actions = SpotlightAction.all.order(:id, :name)
   end
 end

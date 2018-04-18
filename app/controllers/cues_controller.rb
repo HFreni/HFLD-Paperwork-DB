@@ -3,9 +3,6 @@
 # noinspection ALL
 class CuesController < ApplicationController
   before_action :set_cue, only: %i[show edit update destroy]
-  before_action :prepare_size_list, only: %i[new edit update]
-  before_action :prepare_intensity_list, only: %i[new edit update]
-  before_action :prepare_action_list, only: %i[new edit update]
 
 
   # GET /cues
@@ -75,21 +72,7 @@ class CuesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def cue_params
-    params.require(:cue).permit(:lx_cue, :spot_cue, :cue_info, :scene, :song, :size_id, :intensity_id, :action_id, cue_spotlight_attributes: CueSpotlight.attribute_names.map(&:to_sym).push(:_destroy))
+    params.require(:cue).permit(:lx_cue, :spot_cue, :cue_info, :scene, :song, cue_spotlight_attributes: CueSpotlight.attribute_names.map(&:to_sym).push(:_destroy))
   end
 
-  # Build out a sorted list of all gel colors to be used in the form select boxes
-  def prepare_size_list
-    @sizes = SpotlightSize.all.order(:id, :name)
-  end
-
-  # Build out a sorted list of all intensities to be used in the form select boxes
-  def prepare_intensity_list
-    @intensities = SpotlightIntensity.all.order(:id, :name)
-  end
-
-  # Build out a sorted list of all actions to be used in the form select boxes
-  def prepare_action_list
-    @actions = SpotlightAction.all.order(:id, :name)
-  end
 end
