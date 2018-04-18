@@ -70,7 +70,7 @@ class SpotlightsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def spotlight_params
-      params.require(:spotlight).permit(:spotlight_name, :operator, {spotlight_model_attributes: SpotlightModel.attribute_names.map(&:to_sym).push(:_destroy)}, :spotlight_notes, {spotlight_position_attributes: SpotlightPosition.attribute_names.map(&:to_sym).push(:_destroy)}, {color_frames_attributes: ColorFrame.attribute_names.map(&:to_sym).push(:_destroy)} )
+      params.require(:spotlight).permit(:spotlight_name, :spotlight_op, {spotlight_model_attributes: SpotlightModel.attribute_names.map(&:to_sym).push(:_destroy)}, :spotlight_notes, {spotlight_position_attributes: SpotlightPosition.attribute_names.map(&:to_sym).push(:_destroy)}, {color_frames_attributes: ColorFrame.attribute_names.map(&:to_sym).push(:_destroy)} )
     end
     
     # Build out a sorted list of all gel colors to be used in the form select boxes
