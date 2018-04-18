@@ -75,6 +75,7 @@
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.8.2, rbenv: 2.5.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pdf-core (v0.7.0, rbenv: 2.5.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v1.0.0, rbenv: 2.5.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pivot_table (v1.0.0, rbenv: 2.5.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="postgres-copy (v1.4.0, rbenv: 2.5.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="prawn (v2.2.2, rbenv: 2.5.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="prawn-rails (v1.0.1, rbenv: 2.5.1) [gem]" level="application" />

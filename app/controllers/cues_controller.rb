@@ -74,5 +74,5 @@ class CuesController < ApplicationController
   def cue_params
     params.require(:cue).permit(:lx_cue, :spot_cue, :cue_info, :scene, :song, cue_spotlight_attributes: CueSpotlight.attribute_names.map(&:to_sym).push(:_destroy))
   end
-
+  
 end

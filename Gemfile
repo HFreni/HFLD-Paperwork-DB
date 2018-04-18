@@ -53,7 +53,11 @@ gem 'cocoon'
 # Use simple-form
 gem 'simple_form'
 
+# Use jquery-rails
 gem 'jquery-rails'
+
+# Use pivot_table
+gem 'pivot_table'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

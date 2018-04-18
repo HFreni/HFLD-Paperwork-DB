@@ -114,6 +114,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     pdf-core (0.7.0)
     pg (1.0.0)
+    pivot_table (1.0.0)
     postgres-copy (1.4.0)
       activerecord (>= 5.1)
       pg (>= 0.17)
@@ -231,6 +232,7 @@ DEPENDENCIES
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   pg
+  pivot_table
   postgres-copy
   prawn-rails
   puma (~> 3.11)
