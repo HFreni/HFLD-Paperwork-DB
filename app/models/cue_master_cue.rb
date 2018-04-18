@@ -1,0 +1,2 @@
+class CueMasterCue < ApplicationRecord
+end

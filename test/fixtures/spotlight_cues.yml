@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  lxq: 1
-  q: 1.5
-  cueInfo: MyText
-  scene: false
-  song: false
+  color: one
+  size: one
+  intensity: one
+  action: one
+  time: 1
+  description: MyText
 
 two:
-  lxq: 1
-  q: 1.5
-  cueInfo: MyText
-  scene: false
-  song: false
+  color: two
+  size: two
+  intensity: two
+  action: two
+  time: 1
+  description: MyText

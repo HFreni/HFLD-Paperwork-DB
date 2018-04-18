@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  spotlight_name: MyString
+  spotlight_weight: 1.5
+  manufacturer: 1
+
+two:
+  spotlight_name: MyString
+  spotlight_weight: 1.5
+  manufacturer: 1

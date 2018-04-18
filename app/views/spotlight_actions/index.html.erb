@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Spotlight Actions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spotlight_actions.each do |spotlight_action| %>
+      <tr>
+        <td><%= spotlight_action.name %></td>
+        <td><%= spotlight_action.image %></td>
+        <td><%= link_to 'Show', spotlight_action %></td>
+        <td><%= link_to 'Edit', edit_spotlight_action_path(spotlight_action) %></td>
+        <td><%= link_to 'Destroy', spotlight_action, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spotlight Action', new_spotlight_action_path %>

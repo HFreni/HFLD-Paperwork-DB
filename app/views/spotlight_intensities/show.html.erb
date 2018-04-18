@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @spotlight_intensity.name %>
+</p>
+
+<p>
+  <strong>Intensity:</strong>
+  <%= @spotlight_intensity.intensity %>
+</p>
+
+<%= link_to 'Edit', edit_spotlight_intensity_path(@spotlight_intensity) %> |
+<%= link_to 'Back', spotlight_intensities_path %>

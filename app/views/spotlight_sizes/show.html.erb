@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @spotlight_size.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @spotlight_size.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @spotlight_size.image %>
+</p>
+
+<%= link_to 'Edit', edit_spotlight_size_path(@spotlight_size) %> |
+<%= link_to 'Back', spotlight_sizes_path %>

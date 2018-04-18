@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @spotlight_action.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @spotlight_action.image %>
+</p>
+
+<%= link_to 'Edit', edit_spotlight_action_path(@spotlight_action) %> |
+<%= link_to 'Back', spotlight_actions_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lx_cue: 1.5
+  spot_cue: 1.5
+  cue_info: MyText
+  scene: false
+  song: false
+
+two:
+  lx_cue: 1.5
+  spot_cue: 1.5
+  cue_info: MyText
+  scene: false
+  song: false
