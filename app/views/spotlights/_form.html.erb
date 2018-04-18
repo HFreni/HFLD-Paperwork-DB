@@ -17,7 +17,7 @@
 
   <div class="field">
     <%= f.label :spotlight_op, :class => "label"  %>
-    <%= f.collection_select(:operator_id, @people, :id, :full_name, prompt: true) %>
+    <div class="select"><%= f.collection_select(:operator_id, @people, :id, :full_name, prompt: true) %></div>
   </div>
 
   <div class="field">
@@ -32,7 +32,7 @@
 
   <div class="field">
     <%= f.label :spotlight_position, :class => "label"  %>
-    <%= f.collection_select(:position_id, @spotlight_position, :id, :name, prompt: true) %>
+    <div class="select"><%= f.collection_select(:position_id, @position, :id, :position_name, prompt: true) %></div>
   </div>
 
   <p class="subtitle"> Color Frames</p>
