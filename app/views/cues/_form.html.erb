@@ -1,5 +1,5 @@
 
-<%= simple_form_for(@master_cue) do |f| %>
+<%= simple_form_for(@cue) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
@@ -9,6 +9,7 @@
     <%= f.input :cue_info %>
     <%= f.input :scene %>
     <%= f.input :song %>
+    <%= f.collection_select(:intensity_id, @intensities, :id, :name, prompt: true) %>
   </div>
 
   <div class="form-actions">

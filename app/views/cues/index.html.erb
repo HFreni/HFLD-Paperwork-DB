@@ -1,0 +1,44 @@
+<section class="section">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+    <div class="columns">
+      <div class="column has-text-centered">
+        <h1>Cues</h1>
+
+        <table class="table is-fullwidth">
+          <thead>
+            <tr>
+              <th>Lx cue</th>
+              <th>Spot cue</th>
+              <th>Cue info</th>
+              <th>Scene</th>
+              <th>Song</th>
+              <th>Intensity</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @cues.each do |cue| %>
+              <tr>
+                <td><%= cue.lx_cue %></td>
+                <td><%= cue.spot_cue %></td>
+                <td><%= cue.cue_info %></td>
+                <td><%= cue.scene %></td>
+                <td><%= cue.song %></td>
+                <td><%= cue.intensity ? cue.intensity.name : "No Intensity Assigned Yet" %> </td>
+                <td><%= link_to 'Show', cue %></td>
+                <td><%= link_to 'Edit', edit_cue_path(cue) %></td>
+                <td><%= link_to 'Destroy', cue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <br>
+
+        <%= link_to 'New Cue', new_cue_path %>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -23,8 +23,10 @@
         <a class="navbar-link">Spotlight</a>
         <div class="navbar-dropdown">
           <%= link_to "Spotlight Setup", spotlights_path, class: "navbar-item" %>
-          <%= link_to "Spotlight Cues", spotlight_cues_path, class: "navbar-item" %>
-          <%= link_to "Spotlight Manufacturers", spotlight_models_path, class: "navbar-item" %>
+          <%= link_to "Spotlight Cues", cues_path, class: "navbar-item" %>
+          <%= link_to "Spotlight Operators", people_path, class: "navbar-item" %>
+          <%= link_to "Spotlight Models", spotlight_models_path, class: "navbar-item" %>
+          <%= link_to "Spotlight Positions", spotlight_positions_path, class: "navbar-item" %>
         </div>
       </div>
       <div class="navbar-item has-dropdown is-hoverable">

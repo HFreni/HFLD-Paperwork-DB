@@ -71,6 +71,6 @@ class CueSpotlightsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def cue_spotlight_params
-    params.require(:cue_spotlight).permit(:references, :references)
+    params.require(:cue_spotlight).permit(:cue, :spotlight, :spotlight_size, :spotlight_intensity, :spotlight_action, :time, :description)
   end
 end
