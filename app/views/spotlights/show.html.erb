@@ -10,7 +10,7 @@
             <%= @spotlight.spotlight_name %>
           </p>
           <p class="subtitle">
-            <%= @spotlight.spotlight_op ? @spotlight.spotlight_op.person_fname : "no operator assigned" %>
+            <%= @spotlight.operator ? @spotlight.operator.full_name  : "No Operator Assigned Yet" %>
           </p>
           <%= image_tag("SpotOp.png") %>
           <table class="table is-fullwidth">
@@ -29,7 +29,7 @@
               <% end %>
             </tbody>
           </table>
-          <p class="subtitle"><%= @spotlight.spotlight_positions.ids %></p>
+          <p class="subtitle"><%= @spotlight.position ? @spotlight.position.name  : "No Position Assigned Yet" %></p>
           <p class="has-text-weight-bold spotNotes"><%= @spotlight.spotlight_notes %></p>
           <p> For Debug Purposes:
             <%= @spotlight.id %>

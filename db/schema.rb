@@ -64,14 +64,12 @@ ActiveRecord::Schema.define(version: 2018_04_17_215224) do
   end
 
   create_table "people", force: :cascade do |t|
-    t.bigint "spotlight_id"
     t.string "person_fname"
     t.string "person_lname"
     t.string "person_email"
     t.string "person_phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["spotlight_id"], name: "index_people_on_spotlight_id"
   end
 
   create_table "spotlight_actions", force: :cascade do |t|
@@ -110,22 +108,18 @@ ActiveRecord::Schema.define(version: 2018_04_17_215224) do
   end
 
   create_table "spotlight_models", force: :cascade do |t|
-    t.bigint "spotlight_id"
     t.string "spotlight_name"
     t.float "spotlight_weight"
     t.bigint "manufacturer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["manufacturer_id"], name: "index_spotlight_models_on_manufacturer_id"
-    t.index ["spotlight_id"], name: "index_spotlight_models_on_spotlight_id"
   end
 
   create_table "spotlight_positions", force: :cascade do |t|
-    t.bigint "spotlight_id"
     t.string "position_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["spotlight_id"], name: "index_spotlight_positions_on_spotlight_id"
   end
 
   create_table "spotlight_sizes", force: :cascade do |t|
@@ -141,14 +135,14 @@ ActiveRecord::Schema.define(version: 2018_04_17_215224) do
   create_table "spotlights", force: :cascade do |t|
     t.string "spotlight_name"
     t.text "spotlight_notes"
-    t.bigint "person_id"
+    t.bigint "operator_id"
     t.bigint "spotlight_model_id"
-    t.bigint "spotlight_position_id"
+    t.bigint "position_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["person_id"], name: "index_spotlights_on_person_id"
+    t.index ["operator_id"], name: "index_spotlights_on_operator_id"
+    t.index ["position_id"], name: "index_spotlights_on_position_id"
     t.index ["spotlight_model_id"], name: "index_spotlights_on_spotlight_model_id"
-    t.index ["spotlight_position_id"], name: "index_spotlights_on_spotlight_position_id"
   end
 
   add_foreign_key "color_frames", "colors"
