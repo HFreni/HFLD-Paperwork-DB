@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
+# noinspection ALL
 class CueMasterCuesController < ApplicationController
-  before_action :set_cue_master_cue, only: [:show, :edit, :update, :destroy]
+  before_action :set_cue_master_cue, only: %i[show edit update destroy]
 
   # GET /cue_master_cues
   # GET /cue_master_cues.json
@@ -9,8 +12,7 @@ class CueMasterCuesController < ApplicationController
 
   # GET /cue_master_cues/1
   # GET /cue_master_cues/1.json
-  def show
-  end
+  def show; end
 
   # GET /cue_master_cues/new
   def new
@@ -18,8 +20,7 @@ class CueMasterCuesController < ApplicationController
   end
 
   # GET /cue_master_cues/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /cue_master_cues
   # POST /cue_master_cues.json
@@ -62,13 +63,14 @@ class CueMasterCuesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_cue_master_cue
-      @cue_master_cue = CueMasterCue.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def cue_master_cue_params
-      params.require(:cue_master_cue).permit(:references, :references)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_cue_master_cue
+    @cue_master_cue = CueMasterCue.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def cue_master_cue_params
+    params.require(:cue_master_cue).permit(:references, :references)
+  end
 end

@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
+# noinspection ALL
 class CueSpotlightsController < ApplicationController
-  before_action :set_cue_spotlight, only: [:show, :edit, :update, :destroy]
+  before_action :set_cue_spotlight, only: %i[show edit update destroy]
 
   # GET /cue_spotlights
   # GET /cue_spotlights.json
@@ -9,8 +12,7 @@ class CueSpotlightsController < ApplicationController
 
   # GET /cue_spotlights/1
   # GET /cue_spotlights/1.json
-  def show
-  end
+  def show; end
 
   # GET /cue_spotlights/new
   def new
@@ -18,8 +20,7 @@ class CueSpotlightsController < ApplicationController
   end
 
   # GET /cue_spotlights/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /cue_spotlights
   # POST /cue_spotlights.json
@@ -62,13 +63,14 @@ class CueSpotlightsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_cue_spotlight
-      @cue_spotlight = CueSpotlight.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def cue_spotlight_params
-      params.require(:cue_spotlight).permit(:references, :references)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_cue_spotlight
+    @cue_spotlight = CueSpotlight.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def cue_spotlight_params
+    params.require(:cue_spotlight).permit(:references, :references)
+  end
 end

@@ -22,19 +22,19 @@
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">Spotlight</a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="/spotlights">Spotlight Setup</a>
-          <a class="navbar-item" href="/spotlightcues">Spotlight Cues</a>
-          <a class="navbar-item" href="/spotlightmanufacturers">Spotlight Manufacturers</a>
+          <%= link_to "Spotlight Setup", spotlights_path, class: "navbar-item" %>
+          <%= link_to "Spotlight Cues", spotlight_cues_path, class: "navbar-item" %>
+          <%= link_to "Spotlight Manufacturers", spotlight_models_path, class: "navbar-item" %>
         </div>
       </div>
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">Inventory Management</a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="/inventory-config">Inventory Setup</a>
-          <a class="navbar-item" href="/inventory-locations">Inventory Locations</a>
+          <a class="navbar-item" href="/">Inventory Setup</a>
+          <a class="navbar-item" href="/">Inventory Locations</a>
         </div>
       </div>
-      <a class="navbar-item" href="/colors">Gel Colors</a>
+      <%= link_to "Gel Colors", colors_path, class: "navbar-item" %>
     </nav>
     <%= yield %>
   </body>

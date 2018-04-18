@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# create color_frames table, a table that assigns colors to spotlights in a specific frame position
 class CreateColorFrames < ActiveRecord::Migration[5.2]
   def change
     create_table :color_frames do |t|

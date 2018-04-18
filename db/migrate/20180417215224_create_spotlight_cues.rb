@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# create the spotlight_cues table
 class CreateSpotlightCues < ActiveRecord::Migration[5.2]
   def change
     create_table :spotlight_cues do |t|

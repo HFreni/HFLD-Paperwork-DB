@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# create the people table, which allows you to assign people to spotlights or (later) roles in a prodution
 class CreatePeople < ActiveRecord::Migration[5.2]
   def change
     create_table :people do |t|

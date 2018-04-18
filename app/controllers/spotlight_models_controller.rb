@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
+# noinspection ALL
 class SpotlightModelsController < ApplicationController
-  before_action :set_spotlight_model, only: [:show, :edit, :update, :destroy]
+  before_action :set_spotlight_model, only: %i[show edit update destroy]
 
   # GET /spotlight_models
   # GET /spotlight_models.json
@@ -9,8 +12,7 @@ class SpotlightModelsController < ApplicationController
 
   # GET /spotlight_models/1
   # GET /spotlight_models/1.json
-  def show
-  end
+  def show; end
 
   # GET /spotlight_models/new
   def new
@@ -18,8 +20,7 @@ class SpotlightModelsController < ApplicationController
   end
 
   # GET /spotlight_models/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /spotlight_models
   # POST /spotlight_models.json
@@ -62,13 +63,14 @@ class SpotlightModelsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_spotlight_model
-      @spotlight_model = SpotlightModel.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def spotlight_model_params
-      params.require(:spotlight_model).permit(:spotlight_name, :spotlight_weight, :manufacturer_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_spotlight_model
+    @spotlight_model = SpotlightModel.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def spotlight_model_params
+    params.require(:spotlight_model).permit(:spotlight_name, :spotlight_weight, :manufacturer_id)
+  end
 end
