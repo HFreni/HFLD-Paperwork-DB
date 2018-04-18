@@ -29,9 +29,10 @@ ActiveRecord::Schema.define(version: 2018_04_17_215224) do
     t.string "gel_num"
     t.string "gel_name"
     t.string "gel_hex"
-    t.integer "manufacturer"
+    t.bigint "manufacturer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["manufacturer_id"], name: "index_colors_on_manufacturer_id"
   end
 
   create_table "cue_master_cues", force: :cascade do |t|
@@ -140,8 +141,14 @@ ActiveRecord::Schema.define(version: 2018_04_17_215224) do
   create_table "spotlights", force: :cascade do |t|
     t.string "spotlight_name"
     t.text "spotlight_notes"
+    t.bigint "person_id"
+    t.bigint "spotlight_model_id"
+    t.bigint "spotlight_position_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["person_id"], name: "index_spotlights_on_person_id"
+    t.index ["spotlight_model_id"], name: "index_spotlights_on_spotlight_model_id"
+    t.index ["spotlight_position_id"], name: "index_spotlights_on_spotlight_position_id"
   end
 
   add_foreign_key "color_frames", "colors"

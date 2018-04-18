@@ -17,7 +17,7 @@
 
   <div class="field">
     <%= f.label :spotlight_op, :class => "label"  %>
-    <%= f.number_field :spotlight_op, :class =>"input" %>
+    <%= f.collection_select(:spotlight_op, @people, :id, :full_name, prompt: true) %>
   </div>
 
   <div class="field">

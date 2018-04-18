@@ -12,7 +12,7 @@
             <%= spotlight.spotlight_name %>
           </p>
           <p class="subtitle">
-            <%= spotlight.spotlight_op %>
+            <%= spotlight.spotlight_op ? spotlight.spotlight_op.person_fname : "No Operator Assigned Yet" %>
           </p>
           <%= image_tag("SpotOp.png") %>
           <table class="table is-fullwidth">

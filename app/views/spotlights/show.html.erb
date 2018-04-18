@@ -10,7 +10,7 @@
             <%= @spotlight.spotlight_name %>
           </p>
           <p class="subtitle">
-            <%= @spotlight.spotlight_op %>
+            <%= @spotlight.spotlight_op ? @spotlight.spotlight_op.person_fname : "no operator assigned" %>
           </p>
           <%= image_tag("SpotOp.png") %>
           <table class="table is-fullwidth">

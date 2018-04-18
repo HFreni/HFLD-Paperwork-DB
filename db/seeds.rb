@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-columns = [:id, :gel_num, :gel_name, :gel_hex, :manufacturer]
+columns = [:id, :gel_num, :gel_name, :gel_hex, :manufacturer_id]
 values = CSV.read(Rails.root.join('db/HFLD-Gels.csv'))
 
 timing = Benchmark.measure { Color.import columns, values, validate: false, on_duplicate_key_update: {conflict_target: [:id]} }
