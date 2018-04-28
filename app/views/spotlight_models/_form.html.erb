@@ -27,7 +27,7 @@
 
   <div class="field">
     <%= form.label :manufacturer_id, :class => "label" %>
-    <%= form.text_field :manufacturer_id, :class =>"input" %>
+    <div class="select"><%= form.collection_select(:manufacturer_id, @manufacturers, :id, :name, prompt: true) %></div>
   </div>
 
   <div class="actions">

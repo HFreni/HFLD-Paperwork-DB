@@ -71,3 +71,11 @@ SpotCuesSpotlight.create({id: 3, spot_cue_id: 3, spotlight_id: 1, size: "1/2 B",
 SpotCuesSpotlight.create({id: 4, spot_cue_id: 3, spotlight_id: 2, size: "1/8 B", intensity: "100%", action: "PU Actor 2", time: 3, notes: ""})
 SpotCuesSpotlight.create({id: 5, spot_cue_id: 4, spotlight_id: 2, size: "1/8 B", intensity: "100%", action: "Fall Asleep", time: 3, notes: ""})
 ActiveRecord::Base.connection.execute("ALTER SEQUENCE public.spot_cues_spotlights_id_seq RESTART WITH 1000")
+
+# Populate some manufacturers
+Manufacturer.create({id: 1, name: 'Apollo' })
+Manufacturer.create({id: 2, name: 'Rosco' })
+Manufacturer.create({id: 3, name: 'Lee' })
+Manufacturer.create({id: 4, name: 'Gam' })
+Manufacturer.create({id: 5, name: 'Generic Manufacturer' })
+ActiveRecord::Base.connection.execute("ALTER SEQUENCE public.manufacturers_id_seq RESTART WITH 1000")

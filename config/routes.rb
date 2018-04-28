@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :manufacturers
   resources :spot_cues_spotlights
   get 'spot_cues/matrix'
   resources :spot_cues
