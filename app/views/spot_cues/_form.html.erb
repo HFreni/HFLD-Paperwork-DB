@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@spot_cue) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :number %>
+    <%= f.input :light_cue_number %>
+    <%= f.label :cue_type %> <%= f.select :cue_type, SpotCue.cue_types { |value| [ value, value ] } %>
+    <%= f.input :name %>
+    <%= f.input :notes %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

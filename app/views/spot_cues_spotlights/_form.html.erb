@@ -1,0 +1,25 @@
+
+<%= simple_form_for(@spot_cues_spotlight) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.label :spot_cue_id %>
+    <%= f.collection_select(:spot_cue_id, @spot_cues, :id, :descriptive_name, prompt: true) %>
+
+    <%= f.label :spotlight_id %>
+    <%= f.collection_select(:spotlight_id, @spotlights, :id, :descriptive_name, prompt: true) %>
+
+    <%= f.input :size %>
+    <%= f.input :intensity %>
+    <%= f.input :action %>
+    <%= f.input :time %>
+    <%= f.input :notes %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+

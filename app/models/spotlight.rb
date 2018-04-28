@@ -18,4 +18,8 @@ class Spotlight < ApplicationRecord
   validates_length_of :spotlight_name, maximum: 64, message: 'Fuck You @loansindi'
   validates_length_of :spotlight_notes, maximum: 256, message: 'Fuck You @loansindi'
 
+  def descriptive_name
+    "#{spotlight_name} (#{position.position_name})"
+  end
+
 end

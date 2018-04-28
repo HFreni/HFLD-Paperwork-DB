@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Spot Cues</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Light cue number</th>
+      <th>cue_type</th>
+      <th>Name</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spot_cues.each do |spot_cue| %>
+      <tr>
+        <td><%= spot_cue.number %></td>
+        <td><%= spot_cue.light_cue_number %></td>
+        <td><%= spot_cue.cue_type %></td>
+        <td><%= spot_cue.name %></td>
+        <td><%= spot_cue.notes %></td>
+        <td><%= link_to 'Show', spot_cue %></td>
+        <td><%= link_to 'Edit', edit_spot_cue_path(spot_cue) %></td>
+        <td><%= link_to 'Destroy', spot_cue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spot Cue', new_spot_cue_path %>

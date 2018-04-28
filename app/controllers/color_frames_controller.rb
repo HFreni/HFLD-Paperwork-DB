@@ -3,6 +3,8 @@
 # noinspection ALL,RailsChecklist01
 class ColorFramesController < ApplicationController
   before_action :set_color_frame, only: %i[show edit update destroy]
+  before_action :prepare_color_list, only: %i[new edit create update]
+  before_action :prepare_spotlight_list, only: %i[new edit create update]
 
   # GET /color_frames
   # GET /color_frames.json
@@ -73,4 +75,16 @@ class ColorFramesController < ApplicationController
   def color_frame_params
     params.require(:color_frame).permit(:color_id, :spotlight_id, :frame_position)
   end
+
+  # Build out a sorted list of all gel colors to be used in the form select boxes
+  def prepare_color_list
+    @colors = Color.all.order(:manufacturer_id, :gel_num)
+  end
+
+  # Build out a sorted list of all spotlights to be used in the form select boxes
+  def prepare_spotlight_list
+    @spotlights = Spotlight.all.order(:spotlight_name)
+  end
+
 end
+

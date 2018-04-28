@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= form.label :color_id %>
-    <%= form.text_field :color_id %>
+    <%= form.collection_select(:color_id, @colors, :id, :full_name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :spotlight_id %>
-    <%= form.text_field :spotlight_id %>
+    <%= form.collection_select(:spotlight_id, @spotlights, :id, :descriptive_name, prompt: true) %>
   </div>
 
   <div class="field">

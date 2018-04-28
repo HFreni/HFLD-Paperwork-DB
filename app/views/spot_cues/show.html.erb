@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @spot_cue.number %>
+</p>
+
+<p>
+  <strong>Light cue number:</strong>
+  <%= @spot_cue.light_cue_number %>
+</p>
+
+<p>
+  <strong>cue_type:</strong>
+  <%= @spot_cue.cue_type %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @spot_cue.name %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @spot_cue.notes %>
+</p>
+
+<%= link_to 'Edit', edit_spot_cue_path(@spot_cue) %> |
+<%= link_to 'Back', spot_cues_path %>

@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_17_213020) do
+ActiveRecord::Schema.define(version: 2018_04_28_042059) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "tablefunc"
 
   create_table "color_frames", force: :cascade do |t|
     t.bigint "color_id"
@@ -35,32 +36,6 @@ ActiveRecord::Schema.define(version: 2018_04_17_213020) do
     t.index ["manufacturer_id"], name: "index_colors_on_manufacturer_id"
   end
 
-  create_table "cue_spotlights", force: :cascade do |t|
-    t.bigint "cue_id"
-    t.bigint "spotlight_id"
-    t.bigint "size_id"
-    t.bigint "action_id"
-    t.integer "intensity"
-    t.integer "time"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["action_id"], name: "index_cue_spotlights_on_action_id"
-    t.index ["cue_id"], name: "index_cue_spotlights_on_cue_id"
-    t.index ["size_id"], name: "index_cue_spotlights_on_size_id"
-    t.index ["spotlight_id"], name: "index_cue_spotlights_on_spotlight_id"
-  end
-
-  create_table "cues", force: :cascade do |t|
-    t.float "lx_cue"
-    t.float "spot_cue"
-    t.text "cue_info"
-    t.boolean "scene"
-    t.boolean "song"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "people", force: :cascade do |t|
     t.string "person_fname"
     t.string "person_lname"
@@ -70,20 +45,28 @@ ActiveRecord::Schema.define(version: 2018_04_17_213020) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "spotlight_actions", force: :cascade do |t|
+  create_table "spot_cues", force: :cascade do |t|
+    t.decimal "number"
+    t.decimal "light_cue_number"
+    t.string "cue_type"
     t.string "name"
-    t.text "description"
-    t.string "image"
+    t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "spotlight_intensities", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.integer "intensity"
+  create_table "spot_cues_spotlights", force: :cascade do |t|
+    t.bigint "spot_cue_id"
+    t.bigint "spotlight_id"
+    t.string "size"
+    t.string "intensity"
+    t.string "action"
+    t.decimal "time"
+    t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["spot_cue_id"], name: "index_spot_cues_spotlights_on_spot_cue_id"
+    t.index ["spotlight_id"], name: "index_spot_cues_spotlights_on_spotlight_id"
   end
 
   create_table "spotlight_models", force: :cascade do |t|
@@ -97,14 +80,6 @@ ActiveRecord::Schema.define(version: 2018_04_17_213020) do
 
   create_table "spotlight_positions", force: :cascade do |t|
     t.string "position_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "spotlight_sizes", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -124,6 +99,6 @@ ActiveRecord::Schema.define(version: 2018_04_17_213020) do
 
   add_foreign_key "color_frames", "colors"
   add_foreign_key "color_frames", "spotlights"
-  add_foreign_key "cue_spotlights", "cues"
-  add_foreign_key "cue_spotlights", "spotlights"
+  add_foreign_key "spot_cues_spotlights", "spot_cues"
+  add_foreign_key "spot_cues_spotlights", "spotlights"
 end

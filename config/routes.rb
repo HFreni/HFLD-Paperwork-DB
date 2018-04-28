@@ -1,15 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :cues
-  resources :cue_spotlights
+  resources :spot_cues_spotlights
+  resources :spot_cues
   resources :people
   resources :colors
   resources :spotlights
-  resources :spotlight_sizes
-  resources :spotlight_intensities
-  resources :spotlight_actions
-  resources :spotlight_cues
   resources :spotlight_positions
   resources :spotlight_models
   resources :color_frames
