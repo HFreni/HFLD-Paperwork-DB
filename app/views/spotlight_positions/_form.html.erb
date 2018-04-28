@@ -1,13 +1,26 @@
+<%= form_with(model: spotlight_position, local: true) do |form| %>
+  <% if spotlight_position.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(spotlight_position.errors.count, "error") %> prohibited this spotlight_position from being saved:
+      </h2>
 
-<%= simple_form_for(@spotlight_position) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <ul>
+        <% spotlight_position.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-  <div class="form-inputs">
-    <%= f.input :position_name %>
+  <div class="field">
+    <%= form.label :position_name, :class => "label" %>
+    <%= form.text_field :position_name, :class =>"input" %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="actions">
+    <%= form.submit :class => "button is-link" %>
   </div>
 <% end %>

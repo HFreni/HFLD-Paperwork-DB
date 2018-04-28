@@ -8,9 +8,10 @@
     <th rowspan="2">Light cue number</th>
     <th rowspan="2">Number</th>
     <th rowspan="2">Name</th>
+    <th rowspan="2">Type</th>
 
     <% @spotlights.each do |spotlight| %>
-    <th colspan="5"><%= spotlight.descriptive_name %></th>
+    <th colspan="5"><%= link_to spotlight.descriptive_name, spotlight %></th>
     <% end %>
 
   </tr>
@@ -31,6 +32,7 @@
       <td><%= spot_cue.light_cue_number %></td>
       <td><%= spot_cue.number %></td>
       <td><%= spot_cue.name %></td>
+      <td><%= spot_cue.cue_type %></td>
       <% @spotlights.each do |spotlight| %>
         <% if spot_cue.spotlights.include? spotlight %>
           <% spot_cue_spotlight = spot_cue.spot_cues_spotlights.where(spotlight_id: spotlight.id ).first %>
