@@ -37,7 +37,7 @@
           <td><%= spot_cue.cue_type %></td>
           <% @spotlights.each do |spotlight| %>
             <% if spot_cue.spotlights.include? spotlight %>
-              <% spot_cue_spotlight = spot_cue.spot_cues_spotlights.where(spotlight_id: spotlight.id ).first %>
+              <% spot_cue_spotlight = spot_cue.spot_cue_spotlights.where(spotlight_id: spotlight.id ).first %>
               <td></td>
               <td><%= spot_cue_spotlight.size %></td>
               <td><%= spot_cue_spotlight.intensity %></td>

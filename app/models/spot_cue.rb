@@ -1,7 +1,7 @@
 class SpotCue < ApplicationRecord
 
-  has_many :spot_cues_spotlights
-  has_many :spotlights, through: :spot_cues_spotlights
+  has_many :spot_cue_spotlights
+  has_many :spotlights, through: :spot_cue_spotlights
 
 
   @@cue_types = %w[Regular Scene Song]

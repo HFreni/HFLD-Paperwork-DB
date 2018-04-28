@@ -1,12 +1,12 @@
-<%= form_with(model: spot_cues_spotlight, local: true) do |form| %>
-  <% if spot_cues_spotlight.errors.any? %>
+<%= form_with(model: spot_cue_spotlight, local: true) do |form| %>
+  <% if spot_cue_spotlight.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(spot_cues_spotlight.errors.count, "error") %> prohibited this spot_cue from being saved:
+        <%= pluralize(spot_cue_spotlight.errors.count, "error") %> prohibited this spot_cue from being saved:
       </h2>
 
       <ul>
-        <% spot_cues_spotlight.errors.full_messages.each do |message| %>
+        <% spot_cue_spotlight.errors.full_messages.each do |message| %>
           <li>
             <%= message %>
           </li>

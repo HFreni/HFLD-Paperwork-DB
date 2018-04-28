@@ -50,17 +50,7 @@ ActiveRecord::Schema.define(version: 2018_04_28_163911) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "spot_cues", force: :cascade do |t|
-    t.decimal "number"
-    t.decimal "light_cue_number"
-    t.string "cue_type"
-    t.string "name"
-    t.text "notes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "spot_cues_spotlights", force: :cascade do |t|
+  create_table "spot_cue_spotlights", force: :cascade do |t|
     t.bigint "spot_cue_id"
     t.bigint "spotlight_id"
     t.string "size"
@@ -70,8 +60,18 @@ ActiveRecord::Schema.define(version: 2018_04_28_163911) do
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["spot_cue_id"], name: "index_spot_cues_spotlights_on_spot_cue_id"
-    t.index ["spotlight_id"], name: "index_spot_cues_spotlights_on_spotlight_id"
+    t.index ["spot_cue_id"], name: "index_spot_cue_spotlights_on_spot_cue_id"
+    t.index ["spotlight_id"], name: "index_spot_cue_spotlights_on_spotlight_id"
+  end
+
+  create_table "spot_cues", force: :cascade do |t|
+    t.decimal "number"
+    t.decimal "light_cue_number"
+    t.string "cue_type"
+    t.string "name"
+    t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "spotlight_models", force: :cascade do |t|
@@ -104,6 +104,6 @@ ActiveRecord::Schema.define(version: 2018_04_28_163911) do
 
   add_foreign_key "color_frames", "colors"
   add_foreign_key "color_frames", "spotlights"
-  add_foreign_key "spot_cues_spotlights", "spot_cues"
-  add_foreign_key "spot_cues_spotlights", "spotlights"
+  add_foreign_key "spot_cue_spotlights", "spot_cues"
+  add_foreign_key "spot_cue_spotlights", "spotlights"
 end

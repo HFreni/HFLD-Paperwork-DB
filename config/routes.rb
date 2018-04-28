@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   resources :manufacturers
-  resources :spot_cues_spotlights
+  resources :spot_cue_spotlights
   get 'spot_cues/matrix'
   resources :spot_cues
   resources :people

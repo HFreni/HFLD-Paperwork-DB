@@ -24,10 +24,10 @@ Person.create({:id => 4, :person_fname => 'Fermin', :person_lname => 'Rusek' })
 ActiveRecord::Base.connection.execute("ALTER SEQUENCE public.people_id_seq RESTART WITH 1000")
 
 # Build a couple generic spotlight models
-SpotlightModel.create({id: 1, spotlight_weight: rand(100)+100, manufacturer_id: 1, spotlight_name: 'Generic Spotlight Type 1'})
-SpotlightModel.create({id: 2, spotlight_weight: rand(100)+100, manufacturer_id: 1, spotlight_name: 'Generic Spotlight Type 2'})
-SpotlightModel.create({id: 3, spotlight_weight: rand(100)+100, manufacturer_id: 1, spotlight_name: 'Generic Spotlight Type 3'})
-SpotlightModel.create({id: 4, spotlight_weight: rand(100)+100, manufacturer_id: 1, spotlight_name: 'Generic Spotlight Type 4'})
+SpotlightModel.create({id: 1, spotlight_weight: rand(100)+100, manufacturer_id: 5, spotlight_name: 'Generic Spotlight Type 1'})
+SpotlightModel.create({id: 2, spotlight_weight: rand(100)+100, manufacturer_id: 5, spotlight_name: 'Generic Spotlight Type 2'})
+SpotlightModel.create({id: 3, spotlight_weight: rand(100)+100, manufacturer_id: 5, spotlight_name: 'Generic Spotlight Type 3'})
+SpotlightModel.create({id: 4, spotlight_weight: rand(100)+100, manufacturer_id: 5, spotlight_name: 'Generic Spotlight Type 4'})
 ActiveRecord::Base.connection.execute("ALTER SEQUENCE public.spotlight_models_id_seq RESTART WITH 1000")
 
 # Build a couple generic spotlight positions
@@ -65,12 +65,12 @@ SpotCue.create( {id: 4, number: 142.2, cue_type: "Regular", name: "Actor 2 heads
 ActiveRecord::Base.connection.execute("ALTER SEQUENCE public.spot_cues_id_seq RESTART WITH 1000")
 
 # Populate some SpotCuesSpotlight's
-SpotCuesSpotlight.create({id: 1, spot_cue_id: 1, spotlight_id: 1, size: "n/a", intensity: "n/a", action: "Wake up!", time: 3, notes: ""})
-SpotCuesSpotlight.create({id: 2, spot_cue_id: 1, spotlight_id: 2, size: "n/a", intensity: "n/a", action: "Wake the fuck up", time: 3, notes: ""})
-SpotCuesSpotlight.create({id: 3, spot_cue_id: 3, spotlight_id: 1, size: "1/2 B", intensity: "75%", action: "PU Actor 1", time: 3, notes: ""})
-SpotCuesSpotlight.create({id: 4, spot_cue_id: 3, spotlight_id: 2, size: "1/8 B", intensity: "100%", action: "PU Actor 2", time: 3, notes: ""})
-SpotCuesSpotlight.create({id: 5, spot_cue_id: 4, spotlight_id: 2, size: "1/8 B", intensity: "100%", action: "Fall Asleep", time: 3, notes: ""})
-ActiveRecord::Base.connection.execute("ALTER SEQUENCE public.spot_cues_spotlights_id_seq RESTART WITH 1000")
+SpotCueSpotlight.create({id: 1, spot_cue_id: 1, spotlight_id: 1, size: "n/a", intensity: "n/a", action: "Wake up!", time: 3, notes: ""})
+SpotCueSpotlight.create({id: 2, spot_cue_id: 1, spotlight_id: 2, size: "n/a", intensity: "n/a", action: "Wake the fuck up", time: 3, notes: ""})
+SpotCueSpotlight.create({id: 3, spot_cue_id: 3, spotlight_id: 1, size: "1/2 B", intensity: "75%", action: "PU Actor 1", time: 3, notes: ""})
+SpotCueSpotlight.create({id: 4, spot_cue_id: 3, spotlight_id: 2, size: "1/8 B", intensity: "100%", action: "PU Actor 2", time: 3, notes: ""})
+SpotCueSpotlight.create({id: 5, spot_cue_id: 4, spotlight_id: 2, size: "1/8 B", intensity: "100%", action: "Fall Asleep", time: 3, notes: ""})
+ActiveRecord::Base.connection.execute("ALTER SEQUENCE public.spot_cue_spotlights_id_seq RESTART WITH 1000")
 
 # Populate some manufacturers
 Manufacturer.create({id: 1, name: 'Apollo' })

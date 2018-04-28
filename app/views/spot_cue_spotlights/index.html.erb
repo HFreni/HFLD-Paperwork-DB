@@ -1,0 +1,38 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">Spot Cue Spotlights</h1>
+    <p id="notice"><%= notice %></p>
+    <table class="table is-fullwidth">
+      <thead>
+      <tr>
+        <th>Spot cue</th>
+        <th>Spotlight</th>
+        <th>Size</th>
+        <th>Intensity</th>
+        <th>Action</th>
+        <th>Time</th>
+        <th>Notes</th>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @spot_cue_spotlights.each do |spot_cue_spotlight| %>
+        <tr>
+          <td><%= spot_cue_spotlight.spot_cue.descriptive_name %></td>
+          <td><%= spot_cue_spotlight.spotlight.descriptive_name %></td>
+          <td><%= spot_cue_spotlight.size %></td>
+          <td><%= spot_cue_spotlight.intensity %></td>
+          <td><%= spot_cue_spotlight.action %></td>
+          <td><%= spot_cue_spotlight.time %></td>
+          <td><%= spot_cue_spotlight.notes %></td>
+          <td><%= link_to 'Show', spot_cue_spotlight %></td>
+          <td><%= link_to 'Edit', edit_spot_cue_spotlight_path(spot_cue_spotlight) %></td>
+          <td><%= link_to 'Destroy', spot_cue_spotlight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<%= link_to 'New Spot Cues Spotlight', new_spot_cue_spotlight_path %>
