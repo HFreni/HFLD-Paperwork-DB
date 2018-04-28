@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Spot Cue Matrix</h1>
+
+<table border="1">
+  <thead>
+  <tr>
+    <th rowspan="2">Light cue number</th>
+    <th rowspan="2">Number</th>
+    <th rowspan="2">Name</th>
+
+    <% @spotlights.each do |spotlight| %>
+    <th colspan="5"><%= spotlight.descriptive_name %></th>
+    <% end %>
+
+  </tr>
+  <tr>
+    <% @spotlights.each do |spotlight| %>
+      <th>Color</th>
+      <th>Size</th>
+      <th>Intensity</th>
+      <th>Time</th>
+      <th>Action</th>
+    <% end %>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @spot_cues.each do |spot_cue| %>
+    <tr>
+      <td><%= spot_cue.light_cue_number %></td>
+      <td><%= spot_cue.number %></td>
+      <td><%= spot_cue.name %></td>
+      <% @spotlights.each do |spotlight| %>
+        <% if spot_cue.spotlights.include? spotlight %>
+          <% spot_cue_spotlight = spot_cue.spot_cues_spotlights.where(spotlight_id: spotlight.id ).first %>
+          <td></td>
+          <td><%= spot_cue_spotlight.size %></td>
+          <td><%= spot_cue_spotlight.intensity %></td>
+          <td><%= spot_cue_spotlight.time %></td>
+          <td><%= spot_cue_spotlight.action %></td>
+        <% else %>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        <% end %>
+      <% end %>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spot Cue', new_spot_cue_path %>

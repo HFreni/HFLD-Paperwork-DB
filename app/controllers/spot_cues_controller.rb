@@ -61,6 +61,20 @@ class SpotCuesController < ApplicationController
     end
   end
 
+  # matrix display
+  def matrix
+    @spot_cues = SpotCue.all.order(:number)
+
+    @spotlights = []
+    SpotCue.all.collect { |x|
+      x.spotlights.each { |y|
+        next if @spotlights.include? y
+        @spotlights << y
+      }
+    }
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_spot_cue
