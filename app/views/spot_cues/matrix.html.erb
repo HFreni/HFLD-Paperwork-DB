@@ -31,10 +31,10 @@
       <tbody>
       <% @spot_cues.each do |spot_cue| %>
         <tr>
-          <td><%= spot_cue.light_cue_number %></td>
-          <td><%= spot_cue.number %></td>
-          <td><%= spot_cue.name %></td>
-          <td><%= spot_cue.cue_type %></td>
+          <td bgcolor="<%= background_color_for_cue_type(spot_cue.cue_type) %>"><%= spot_cue.light_cue_number %></td>
+          <td bgcolor="<%= background_color_for_cue_type(spot_cue.cue_type) %>"><%= spot_cue.number %></td>
+          <td bgcolor="<%= background_color_for_cue_type(spot_cue.cue_type) %>"><%= spot_cue.name %></td>
+          <td bgcolor="<%= background_color_for_cue_type(spot_cue.cue_type) %>"><%= spot_cue.cue_type %></td>
           <% @spotlights.each do |spotlight| %>
             <% if spot_cue.spotlights.include? spotlight %>
               <% spot_cue_spotlight = spot_cue.spot_cue_spotlights.where(spotlight_id: spotlight.id ).first %>
@@ -44,11 +44,7 @@
               <td><%= spot_cue_spotlight.time %></td>
               <td><%= spot_cue_spotlight.action %></td>
             <% else %>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td colspan="5" bgcolor="#dcdcdc"></td>
             <% end %>
           <% end %>
 
