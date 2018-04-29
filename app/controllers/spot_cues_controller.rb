@@ -65,6 +65,7 @@ class SpotCuesController < ApplicationController
   # matrix display
   def matrix
     @spot_cues = SpotCue.all.order(:number)
+    @previous = {}
 
     @spotlights = []
     SpotCue.all.collect { |x|

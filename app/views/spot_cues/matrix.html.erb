@@ -7,13 +7,13 @@
     <table border="1" class="table">
       <thead>
       <tr>
-        <th rowspan="2">Light cue number</th>
-        <th rowspan="2">Number</th>
-        <th rowspan="2">Name</th>
-        <th rowspan="2">Type</th>
+        <th rowspan="2" style="vertical-align:middle">Light cue number</th>
+        <th rowspan="2" style="vertical-align:middle">Number</th>
+        <th rowspan="2" style="vertical-align:middle">Name</th>
+        <th rowspan="2" style="vertical-align:middle">Type</th>
 
         <% @spotlights.each do |spotlight| %>
-        <th colspan="5"><%= link_to spotlight.descriptive_name, spotlight %></th>
+        <th colspan="5" style="text-align:center"><%= link_to spotlight.descriptive_name, spotlight %></th>
         <% end %>
 
       </tr>
@@ -34,15 +34,16 @@
           <td bgcolor="<%= background_color_for_cue_type(spot_cue.cue_type) %>" style="font-weight: bold;"><%= spot_cue.light_cue_number %></td>
           <td bgcolor="<%= background_color_for_cue_type(spot_cue.cue_type) %>" style="font-weight: bold;"><%= spot_cue.number %></td>
           <td bgcolor="<%= background_color_for_cue_type(spot_cue.cue_type) %>" style="font-weight: bold;"><%= spot_cue.name %></td>
-          <td bgcolor="<%= background_color_for_cue_type(spot_cue.cue_type) %>" style="font-weight: bold;"><%= spot_cue.cue_type %></td>
+          <td bgcolor="<%= background_color_for_cue_type(spot_cue.cue_type) %>"><%= spot_cue.cue_type %></td>
           <% @spotlights.each do |spotlight| %>
             <% if spot_cue.spotlights.include? spotlight %>
               <% spot_cue_spotlight = spot_cue.spot_cue_spotlights.where(spotlight_id: spotlight.id ).first %>
-              <td></td>
-              <td><%= spot_cue_spotlight.size %></td>
-              <td><%= spot_cue_spotlight.intensity %></td>
-              <td><%= spot_cue_spotlight.time %></td>
-              <td><%= spot_cue_spotlight.action %></td>
+              <td>?</td>
+              <td style="<%= style_for_changed_parameter(spot_cue_spotlight, @previous[spot_cue_spotlight.spotlight.id], :size) %>"><%= spot_cue_spotlight.size %></td>
+              <td style="<%= style_for_changed_parameter(spot_cue_spotlight, @previous[spot_cue_spotlight.spotlight.id], :intensity) %>"><%= spot_cue_spotlight.intensity %></td>
+              <td style="<%= style_for_changed_parameter(spot_cue_spotlight, @previous[spot_cue_spotlight.spotlight.id], :time) %>"><%= spot_cue_spotlight.time %></td>
+              <td style="<%= style_for_changed_parameter(spot_cue_spotlight, @previous[spot_cue_spotlight.spotlight.id], :action) %>"><%= spot_cue_spotlight.action %></td>
+              <% @previous[spot_cue_spotlight.spotlight.id] = spot_cue_spotlight %>
             <% else %>
               <td colspan="5" bgcolor="#dcdcdc"></td>
             <% end %>

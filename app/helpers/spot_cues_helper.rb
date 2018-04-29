@@ -10,4 +10,8 @@ module SpotCuesHelper
       "#ffffff"
     end
   end
+
+  def style_for_changed_parameter(current, previous, parameter)
+    current.public_send(parameter) == previous&.public_send(parameter) ? '' : 'background: #ffe8eb'
+  end
 end
