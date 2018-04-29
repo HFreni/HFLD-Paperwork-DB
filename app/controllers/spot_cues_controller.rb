@@ -1,5 +1,6 @@
 class SpotCuesController < ApplicationController
   before_action :set_spot_cue, only: [:show, :edit, :update, :destroy]
+  before_action :prepare_spotlight_list, only: %i[new edit create update]
 
   # GET /spot_cues
   # GET /spot_cues.json
@@ -83,6 +84,12 @@ class SpotCuesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def spot_cue_params
-      params.require(:spot_cue).permit(:number, :light_cue_number, :cue_type, :name, :notes)
+      params.require(:spot_cue).permit(:number, :light_cue_number, :cue_type, :name, :notes, spot_cue_spotlights_attributes: SpotCueSpotlight.attribute_names.map(&:to_sym).push(:_destroy))
     end
+
+  # Build out a sorted list of all spotlights to be used in the form select boxes
+  def prepare_spotlight_list
+    @spotlights = Spotlight.all.order(:spotlight_name)
+  end
+
 end
