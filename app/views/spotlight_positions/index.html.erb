@@ -1,27 +1,26 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Spotlight Positions</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Position name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @spotlight_positions.each do |spotlight_position| %>
+<section class="section">
+  <div class="container">
+    <h1 class="title">Spotlight Positions</h1>
+    <p id="notice"><%= notice %></p>
+    <table class="table is-fullwidth">
+      <thead>
       <tr>
-        <td><%= spotlight_position.position_name %></td>
-        <td><%= link_to 'Show', spotlight_position %></td>
-        <td><%= link_to 'Edit', edit_spotlight_position_path(spotlight_position) %></td>
-        <td><%= link_to 'Destroy', spotlight_position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Position name</th>
+        <th colspan="3">Show / Edit / Destroy</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+      </thead>
+      <tbody>
+      <% @spotlight_positions.each do |spotlight_position| %>
+        <tr>
+          <td><%= spotlight_position.position_name %></td>
+          <td><%= link_to 'Show', spotlight_position %></td>
+          <td><%= link_to 'Edit', edit_spotlight_position_path(spotlight_position) %></td>
+          <td><%= link_to 'Destroy', spotlight_position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</section>
 
 <%= link_to 'New Spotlight Position', new_spotlight_position_path %>

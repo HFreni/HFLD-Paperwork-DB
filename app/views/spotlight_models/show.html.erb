@@ -12,7 +12,7 @@
 
 <p>
   <strong>Manufacturer:</strong>
-  <%= @spotlight_model.manufacturer_id %>
+  <%= @spotlight_model.manufacturer.name %>
 </p>
 
 <%= link_to 'Edit', edit_spotlight_model_path(@spotlight_model) %> |

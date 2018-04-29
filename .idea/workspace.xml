@@ -2,12 +2,143 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a08abbe5-9e37-4761-9178-5cdaea1a1f73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/HFLD-Design-Portal-V2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HFLD-Design-Portal-V2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/spot_cues.coffee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/spot_cues_spotlights.coffee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/spot_cues.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/spot_cues_spotlights.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/spot_cues_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/spot_cues_spotlights_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/spot_cues_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/spot_cues_spotlights_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/spot_cue.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/spot_cues_spotlight.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spot_cues/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spot_cues/_spot_cue.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spot_cues/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spot_cues/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spot_cues/index.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spot_cues/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spot_cues/show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spot_cues/show.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spot_cues_spotlights/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spot_cues_spotlights/_spot_cues_spotlight.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spot_cues_spotlights/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spot_cues_spotlights/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spot_cues_spotlights/index.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spot_cues_spotlights/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spot_cues_spotlights/show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/spot_cues_spotlights/show.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20180428021431_wipe_old_spotlight_cue_stuff.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20180428024457_create_spot_cues.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20180428024659_create_spot_cues_spotlights.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/spot_cues_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/spot_cues_spotlights_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/spot_cues.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/spot_cues_spotlights.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/spot_cue_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/spot_cues_spotlight_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/system/spot_cues_spotlights_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/system/spot_cues_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/27b9579d-9cbc-4e0c-9750-09b6b5736f3a.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/27b9579d-9cbc-4e0c-9750-09b6b5736f3a/storage_v2/_src_/database/hfld_pmp_dev.oEei3g.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/27b9579d-9cbc-4e0c-9750-09b6b5736f3a/storage_v2/_src_/database/hfld_pmp_dev.oEei3g/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2f229e7f-4ca9-4e6d-b2bd-929e08229e2a.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2f229e7f-4ca9-4e6d-b2bd-929e08229e2a/storage_v2/_src_/database/hfld_pmp_test.Z_Kt9Q.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2f229e7f-4ca9-4e6d-b2bd-929e08229e2a/storage_v2/_src_/database/hfld_pmp_test.Z_Kt9Q/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/cues_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/cues_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/cues/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cues/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/cue_master_cues.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/cue_spotlights.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/cues.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/spotlight_actions.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/spotlight_cues.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/spotlight_intensities.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/spotlight_sizes.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/cue_master_cues.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/cue_spotlights.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/cues.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/positions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/spotlight_actions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/spotlight_cue_data.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/spotlight_cues.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/spotlight_intensities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/spotlight_sizes.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/color_frames_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/color_frames_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/cue_spotlights_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/cues_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/spotlight_actions_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/spotlight_intensities_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/spotlight_sizes_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/cue_master_cues_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/cue_spotlights_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/cues_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/spotlight_actions_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/spotlight_cues_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/spotlight_intensities_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/spotlight_sizes_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/cue.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/cue_spotlight.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/spotlight.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/spotlight.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/spotlight_action.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/spotlight_size.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/color_frames/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/color_frames/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cue_spotlights/_cue_spotlight.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cue_spotlights/_form.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cue_spotlights/edit.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cue_spotlights/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cue_spotlights/index.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cue_spotlights/new.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cue_spotlights/show.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cue_spotlights/show.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cues/_cue.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cues/_form.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cues/edit.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cues/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cues/index.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cues/new.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cues/show.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cues/show.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_actions/_form.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_actions/_spotlight_action.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_actions/edit.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_actions/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_actions/index.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_actions/new.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_actions/show.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_actions/show.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_cues/_form.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_cues/_spotlight_cue.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_cues/edit.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_cues/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_cues/index.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_cues/new.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_cues/show.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_cues/show.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_intensities/_form.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_intensities/_spotlight_intensity.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_intensities/edit.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_intensities/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_intensities/index.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_intensities/new.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_intensities/show.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_intensities/show.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_sizes/_form.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_sizes/_spotlight_size.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_sizes/edit.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_sizes/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_sizes/index.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_sizes/new.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_sizes/show.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/spotlight_sizes/show.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -26,21 +157,75 @@
     <SUITE FILE_PATH="coverage/HFLD_Design_Portal_V2@Development__HFLD_Design_Portal_V2.rcov" NAME="Development: HFLD-Design-Portal-V2 Coverage Results" MODIFIED="1524071569871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HFLD-Design-Portal-V2" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
+    <leaf>
+      <file leaf-file-name="spot_cues_spotlights_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/spot_cues_spotlights_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cues_controller.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/cues_controller.rb">
+      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/color_frames/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="853">
-              <caret line="76" column="2" selection-start-line="76" selection-start-column="2" selection-end-line="76" selection-end-column="2" />
+            <state relative-caret-position="315">
+              <caret line="21" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/spot_cues_spotlights/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="76" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spot_cue.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/spot_cue.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/spot_cues_spotlights/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/spot_cues_spotlights/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="seeds.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="757">
+              <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20180428042059_create_spot_cue_matrix.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20180428042059_create_spot_cue_matrix.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="79" selection-start-line="16" selection-start-column="79" selection-end-line="16" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -53,11 +238,13 @@
       <find>master</find>
       <find>master_cue</find>
       <find>spotlight_cue</find>
+      <find>create_table</find>
     </findStrings>
     <replaceStrings>
       <replace>Cue</replace>
       <replace>cue</replace>
       <replace>cue_spotlight</replace>
+      <replace>drop_table</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -73,9 +260,7 @@
         <option value="$PROJECT_DIR$/db/migrate/20180417211145_create_cues.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180417215224_create_spotlight_cues.rb" />
         <option value="$PROJECT_DIR$/app/models/master_cue.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/helpers/cues_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/cues/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/cues/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/cues/_cue.json.jbuilder" />
@@ -93,11 +278,29 @@
         <option value="$PROJECT_DIR$/db/migrate/20180417213020_create_cue_spotlights.rb" />
         <option value="$PROJECT_DIR$/app/views/cues/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/cue_spotlights_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/spotlight.rb" />
         <option value="$PROJECT_DIR$/app/views/cue_spotlights/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/cues/index.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/controllers/cues_controller.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20180428021431_wipe_old_spotlight_cue_stuff.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20180428024457_create_spot_cues.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/spot_cues_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/spot_cues/_spot_cue.json.jbuilder" />
+        <option value="$PROJECT_DIR$/app/views/spot_cues/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/spot_cues/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/spot_cues/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/color_frames/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/spotlight.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/color_frames_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/spot_cues_spotlights_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/spot_cues_spotlights/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/spot_cue.rb" />
+        <option value="$PROJECT_DIR$/app/views/spot_cues_spotlights/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/spot_cues_spotlights/show.html.erb" />
+        <option value="$PROJECT_DIR$/db/seeds.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20180428042059_create_spot_cue_matrix.rb" />
       </list>
     </option>
   </component>
@@ -120,45 +323,109 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="3005" />
+    <option name="x" value="847" />
     <option name="y" value="23" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="width" value="1713" />
+    <option name="height" value="907" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <showMembers ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="HFLD-Design-Portal-V2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HFLD-Design-Portal-V2" type="462c0819:PsiDirectoryNode" />
+              <item name="HFLD-Paperwork-DB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HFLD-Paperwork-DB" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="HFLD-Design-Portal-V2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HFLD-Design-Portal-V2" type="462c0819:PsiDirectoryNode" />
+              <item name="HFLD-Paperwork-DB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HFLD-Paperwork-DB" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="HFLD-Design-Portal-V2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HFLD-Design-Portal-V2" type="462c0819:PsiDirectoryNode" />
+              <item name="HFLD-Paperwork-DB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HFLD-Paperwork-DB" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HFLD-Paperwork-DB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HFLD-Paperwork-DB" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="channels" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HFLD-Paperwork-DB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HFLD-Paperwork-DB" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="HFLD-Design-Portal-V2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HFLD-Design-Portal-V2" type="462c0819:PsiDirectoryNode" />
+              <item name="HFLD-Paperwork-DB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HFLD-Paperwork-DB" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HFLD-Paperwork-DB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HFLD-Paperwork-DB" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HFLD-Paperwork-DB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HFLD-Paperwork-DB" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="color_frames" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HFLD-Paperwork-DB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HFLD-Paperwork-DB" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="spot_cues" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HFLD-Paperwork-DB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HFLD-Paperwork-DB" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="spot_cues_spotlights" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HFLD-Paperwork-DB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HFLD-Paperwork-DB" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="spotlights" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HFLD-Paperwork-DB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HFLD-Paperwork-DB" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HFLD-Paperwork-DB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HFLD-Paperwork-DB" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HFLD-Paperwork-DB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HFLD-Paperwork-DB" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="migrate" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="RailsProjectView" />
     </panes>
   </component>
@@ -178,10 +445,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Rails.Development: HFLD-Design-Portal-V2">
+  <component name="RunManager" selected="Rails.Development: HFLD-Paperwork-DB">
     <configuration name="Development: HFLD-Design-Portal-V2" type="RailsRunConfigurationType" factoryName="Rails">
       <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
       <module name="HFLD-Design-Portal-V2" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+    </configuration>
+    <configuration name="Development: HFLD-Paperwork-DB" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="HFLD-Paperwork-DB" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
@@ -206,6 +496,29 @@
       <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
       <module name="HFLD-Design-Portal-V2" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="production" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+    </configuration>
+    <configuration name="Production: HFLD-Paperwork-DB" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="HFLD-Paperwork-DB" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
@@ -227,6 +540,27 @@
     </configuration>
     <configuration name="spec: HFLD-Design-Portal-V2" type="RakeRunConfigurationType" factoryName="Rake">
       <module name="HFLD-Design-Portal-V2" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+    </configuration>
+    <configuration name="spec: HFLD-Paperwork-DB" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="HFLD-Paperwork-DB" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
@@ -270,11 +604,39 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
     </configuration>
+    <configuration name="test: HFLD-Paperwork-DB" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="HFLD-Paperwork-DB" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+    </configuration>
     <list>
       <item itemvalue="Rake.test: HFLD-Design-Portal-V2" />
       <item itemvalue="Rake.spec: HFLD-Design-Portal-V2" />
       <item itemvalue="Rails.Production: HFLD-Design-Portal-V2" />
       <item itemvalue="Rails.Development: HFLD-Design-Portal-V2" />
+      <item itemvalue="Rake.test: HFLD-Paperwork-DB" />
+      <item itemvalue="Rake.spec: HFLD-Paperwork-DB" />
+      <item itemvalue="Rails.Production: HFLD-Paperwork-DB" />
+      <item itemvalue="Rails.Development: HFLD-Paperwork-DB" />
     </list>
   </component>
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" />
@@ -291,33 +653,37 @@
       <workItem from="1524023916874" duration="2202000" />
       <workItem from="1524061549331" duration="1134000" />
       <workItem from="1524071286604" duration="10077000" />
+      <workItem from="1524246830092" duration="66000" />
+      <workItem from="1524246898474" duration="15000" />
+      <workItem from="1524315596331" duration="10727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10816000" />
+    <option name="totallyTimeSpent" value="22216000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2560" y="23" width="2560" height="1417" extended-state="6" />
+    <frame x="0" y="23" width="2560" height="1366" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18007812" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5023438" side_tool="true" visible="true" weight="0.23827252" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960938" weight="0.3298585" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18554688" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="1.0" side_tool="true" visible="true" weight="0.29643962" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49765626" weight="0.32911393" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960938" weight="0.3298585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49765626" weight="0.32911393" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" sideWeight="NaN" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
@@ -329,273 +695,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/helpers/cues_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cues/_cue.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cues/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cues/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cues/index.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/spotlight_cue.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://Ruby/CueSpotlight">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Ruby</ID>
-          <OriginalElement>CueSpotlight</OriginalElement>
-          <nodes>
-            <node x="" y="">ActiveModel::AttributeMethods::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Scoping::Default</node>
-            <node x="" y="">ActiveRecord::NestedAttributes</node>
-            <node x="" y="">ActiveRecord::Transactions</node>
-            <node x="" y="">ActiveRecord::Suppressor</node>
-            <node x="" y="">ActiveRecord::QueryCache::ClassMethods</node>
-            <node x="" y="">ActiveSupport::Concern</node>
-            <node x="" y="">ActiveSupport::Autoload</node>
-            <node x="" y="">ApplicationRecord</node>
-            <node x="" y="">ActiveRecord::Sanitization::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Locking::Optimistic::ClassMethods</node>
-            <node x="" y="">ActiveRecord::CollectionCacheKey</node>
-            <node x="" y="">ActiveRecord::Inheritance::ClassMethods</node>
-            <node x="" y="">ActiveRecord::DynamicMatchers</node>
-            <node x="" y="">ActiveModel::Translation</node>
-            <node x="" y="">ActiveModel::Serializers::JSON</node>
-            <node x="" y="">ActiveRecord::Persistence</node>
-            <node x="" y="">FileUtils</node>
-            <node x="" y="">ActiveModel::Naming</node>
-            <node x="" y="">ActiveRecord::NoTouching::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Base</node>
-            <node x="" y="">ActiveModel::Validations::HelperMethods</node>
-            <node x="" y="">MakeMakefile</node>
-            <node x="" y="">Minitest::Expectations</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::Serialization::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Aggregations::ClassMethods</node>
-            <node x="" y="">ActiveRecord::DefineCallbacks</node>
-            <node x="" y="">ActiveRecord::Explain</node>
-            <node x="" y="">ActiveRecord::AttributeDecorators::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Enum</node>
-            <node x="" y="">ActiveRecord::SecureToken</node>
-            <node x="" y="">ActiveRecord::CounterCache::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Delegation::DelegateCache</node>
-            <node x="" y="">ActiveRecord::Callbacks</node>
-            <node x="" y="">ActiveRecord::Transactions::ClassMethods</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::Write::ClassMethods</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::Dirty</node>
-            <node x="" y="">ActiveRecord::AutosaveAssociation::ClassMethods</node>
-            <node x="" y="">SimpleForm::ActionViewExtensions::FormHelper</node>
-            <node x="" y="">ActiveModel::Validations</node>
-            <node x="" y="">Rake::DSL</node>
-            <node x="" y="">ActiveSupport::Callbacks</node>
-            <node x="" y="">Rake::FileUtilsExt</node>
-            <node x="" y="">ActiveSupport::Callbacks::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Attributes</node>
-            <node x="" y="">ActiveRecord::Timestamp</node>
-            <node x="" y="">ActiveSupport::Benchmarkable</node>
-            <node x="" y="">ActiveRecord::ReadonlyAttributes::ClassMethods</node>
-            <node x="" y="">PP::ObjectMixin</node>
-            <node x="" y="">ActiveRecord::Inheritance</node>
-            <node x="" y="">FileUtils::StreamUtils_</node>
-            <node x="" y="">ActiveRecord::Serialization</node>
-            <node x="" y="">Kernel</node>
-            <node x="" y="">ActiveRecord::Suppressor::ClassMethods</node>
-            <node x="" y="">ActiveRecord::NestedAttributes::ClassMethods</node>
-            <node x="" y="">ActiveRecord::ReadonlyAttributes</node>
-            <node x="" y="">ActiveRecord::Associations</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::Read::ClassMethods</node>
-            <node x="" y="">ActiveModel::SecurePassword::ClassMethods</node>
-            <node x="" y="">ActiveRecord::DefineCallbacks::ClassMethods</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::Query</node>
-            <node x="" y="">ActiveModel::Validations::Callbacks::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Delegation::ClassSpecificRelation</node>
-            <node x="" y="">ActiveRecord::Persistence::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Scoping::Default::ClassMethods</node>
-            <node x="" y="">ActiveRecord::SecureToken::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Scoping</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::BeforeTypeCast</node>
-            <node x="" y="">ActiveRecord::Integration</node>
-            <node x="" y="">ActiveRecord::Reflection</node>
-            <node x="" y="">ActiveRecord::Sanitization</node>
-            <node x="" y="">ActiveRecord::AttributeMethods</node>
-            <node x="" y="">ActiveRecord::Locking::Optimistic</node>
-            <node x="" y="">ActiveRecord::Aggregations</node>
-            <node x="" y="">ActiveRecord::AttributeDecorators</node>
-            <node x="" y="">ActiveModel::ForbiddenAttributesProtection</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::TimeZoneConversion</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::Write</node>
-            <node x="" y="">ActiveRecord::Validations::ClassMethods</node>
-            <node x="" y="">ActiveModel::Validations::Callbacks</node>
-            <node x="" y="">ActiveModel::SecurePassword</node>
-            <node x="" y="">ActiveRecord::Associations::ClassMethods</node>
-            <node x="" y="">ActiveModel::Conversion::ClassMethods</node>
-            <node x="" y="">PostgresCopy::ActsAsCopyTarget</node>
-            <node x="" y="">ActiveRecord::AutosaveAssociation</node>
-            <node x="" y="">ActiveModel::Serialization</node>
-            <node x="" y="">ActionController::RespondWith::ClassMethods</node>
-            <node x="" y="">ActiveModel::Dirty</node>
-            <node x="" y="">ActiveRecord::Attributes::ClassMethods</node>
-            <node x="" y="">BasicObject</node>
-            <node x="" y="">ActiveRecord::Integration::ClassMethods</node>
-            <node x="" y="">CueSpotlight</node>
-            <node x="" y="">ActiveRecord::Translation</node>
-            <node x="" y="">ActiveRecord::Store::ClassMethods</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::Read</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::ClassMethods</node>
-            <node x="" y="">ActiveRecord::NoTouching</node>
-            <node x="" y="">Object</node>
-            <node x="" y="">ActiveModel::AttributeAssignment</node>
-            <node x="" y="">ActiveRecord::Scoping::Named::ClassMethods</node>
-            <node x="" y="">ActiveRecord::TouchLater</node>
-            <node x="" y="">ActionController::RespondWith</node>
-            <node x="" y="">ActiveRecord::Core::ClassMethods</node>
-            <node x="" y="">ActiveModel::Validations::ClassMethods</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::Serialization</node>
-            <node x="" y="">ActiveRecord::CounterCache</node>
-            <node x="" y="">ActiveRecord::Scoping::Named</node>
-            <node x="" y="">ActiveSupport::Tryable</node>
-            <node x="" y="">ActiveRecord::ConnectionHandling</node>
-            <node x="" y="">ActiveRecord::ModelSchema::ClassMethods</node>
-            <node x="" y="">ActiveModel::AttributeMethods</node>
-            <node x="" y="">ActiveRecord::Scoping::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Reflection::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods</node>
-            <node x="" y="">Zip</node>
-            <node x="" y="">ActiveModel::Conversion</node>
-            <node x="" y="">ActiveRecord::Validations</node>
-            <node x="" y="">ActiveRecord::AttributeAssignment</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::TimeZoneConversion::ClassMethods</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::PrimaryKey</node>
-            <node x="" y="">ActiveRecord::Core</node>
-            <node x="" y="">ActiveRecord::Locking::Pessimistic</node>
-            <node x="" y="">PostgresCopy::ActsAsCopyTarget::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Querying</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods</node>
-            <node x="" y="">ActiveModel::Callbacks</node>
-            <node x="" y="">ActiveRecord::Store</node>
-            <node x="" y="">ActiveSupport::DescendantsTracker</node>
-            <node x="" y="">ActiveRecord::ModelSchema</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.2969662441247686" x="3500.4999999999995" y="610.4043165467624" />
-          <SelectedNodes />
-          <Categories />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180415222402_create_colors.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180416213255_create_color_frames.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/color_frame.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180417211734_create_spotlight_sizes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180417211655_create_spotlight_intensities.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180417190659_create_spotlight_models.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180417211447_create_spotlight_actions.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180417191458_create_people.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180417191232_create_spotlight_positions.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180415221510_create_spotlights.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/color_frames_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/colors_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/spotlight_models_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/people_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-379" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/spotlight_actions_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="73" column="36" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/color.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -610,23 +709,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/spotlight_position.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/person.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/people/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/spotlights/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -644,83 +730,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/spotlight_model.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/spotlight_intensity.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180417211145_create_cues.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/spotlight_intensity.rb" />
     <entry file="file://$PROJECT_DIR$/app/views/cues/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180417213020_create_cue_spotlights.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/spotlights_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="77" column="73" lean-forward="true" selection-start-line="77" selection-start-column="73" selection-end-line="77" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/spotlights/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/cue_spotlights_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="37" selection-start-line="37" selection-end-line="51" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/cue_spotlight.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/cue.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/spotlight.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -730,9 +744,6 @@
           <caret line="20" selection-start-line="20" selection-end-line="25" selection-end-column="49" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cue_spotlights/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/cue_spotlights/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
@@ -750,8 +761,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/cues/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        <state relative-caret-position="75">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -762,10 +773,256 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/spotlights/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/cue_spotlight.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/cue.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/cues_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="853">
+        <state relative-caret-position="790">
           <caret line="76" column="2" selection-start-line="76" selection-start-column="2" selection-end-line="76" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/cue_spotlights_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180417211145_create_cues.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180417211447_create_spotlight_actions.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180417211655_create_spotlight_intensities.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180417211734_create_spotlight_sizes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180417213020_create_cue_spotlights.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180415221510_create_spotlights.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180428021431_wipe_old_spotlight_cue_stuff.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/spot_cues/show.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/spot_cues/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/spot_cues/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/spot_cues/index.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/spot_cues/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/spot_cues/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/spot_cues/_spot_cue.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="66" selection-start-column="66" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180428024457_create_spot_cues.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/spotlight.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180416213255_create_color_frames.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/spot_cues/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/spotlights_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/spotlights/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/spotlights/_color_frame_fields.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="110" lean-forward="true" selection-start-line="5" selection-start-column="110" selection-end-line="5" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/spot_cues_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/color_frames_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="87" lean-forward="true" selection-start-line="83" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/spot_cues_spotlights_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/color_frames/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/spot_cues_spotlights/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="76" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/spot_cue.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/spot_cues_spotlights/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/spot_cues_spotlights/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="757">
+          <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180428042059_create_spot_cue_matrix.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="79" selection-start-line="16" selection-start-column="79" selection-end-line="16" selection-end-column="79" />
         </state>
       </provider>
     </entry>

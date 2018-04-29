@@ -4,6 +4,7 @@
 class Color < ApplicationRecord
   has_many :color_frames
   has_many :spotlights, through: :color_frame
+  belongs_to :manufacturer
   accepts_nested_attributes_for :color_frames
 
   # return the full name of a gel color, number + name

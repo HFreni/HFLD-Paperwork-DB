@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  spot_cue: one
+  spotlight: one
+  size: MyString
+  intensity: MyString
+  action: MyString
+  time: 
+  notes: MyText
+
+two:
+  spot_cue: two
+  spotlight: two
+  size: MyString
+  intensity: MyString
+  action: MyString
+  time: 
+  notes: MyText

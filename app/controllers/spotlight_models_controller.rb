@@ -3,6 +3,7 @@
 # noinspection ALL
 class SpotlightModelsController < ApplicationController
   before_action :set_spotlight_model, only: %i[show edit update destroy]
+  before_action :prepare_manufacturer_list, only: %i[new edit create update]
 
   # GET /spotlight_models
   # GET /spotlight_models.json
@@ -72,5 +73,10 @@ class SpotlightModelsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def spotlight_model_params
     params.require(:spotlight_model).permit(:spotlight_name, :spotlight_weight, :manufacturer_id)
+  end
+
+  # Build out a sorted list of all positions to be used in the form select boxes
+  def prepare_manufacturer_list
+    @manufacturers = Manufacturer.all.order(:id, :name)
   end
 end

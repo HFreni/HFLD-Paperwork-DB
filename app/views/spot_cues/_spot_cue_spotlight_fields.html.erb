@@ -1,0 +1,25 @@
+<tr class="nested-fields">
+  <div class="field">
+    <td>
+      <div class="select"><%= f.collection_select(:spotlight_id, @spotlights, :id, :spotlight_name, prompt: true) %></div>
+    </td>
+  </div>
+  <div class="field">
+    <td>not yet</td>
+  </div>
+  <div class="field">
+    <td><%= f.text_field :size, :class => "input" %></td>
+  </div>
+  <div class="field">
+    <td><%= f.text_field :intensity, :class => "input" %></td>
+  </div>
+  <div class="field">
+    <td><%= f.text_field :time, :class => "input" %></td>
+  </div>
+  <div class="field">
+    <td><%= f.text_field :action, :class => "input" %></td>
+  </div>
+  <div class="field">
+    <td><%= link_to_remove_association "remove spotlight", f, :class => "button is-danger" %></td>
+  </div>
+</tr>

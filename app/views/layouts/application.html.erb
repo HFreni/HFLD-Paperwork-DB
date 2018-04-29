@@ -20,13 +20,27 @@
         </a>
       </div>
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">Spotlight</a>
+        <a class="navbar-link">Spotlights</a>
         <div class="navbar-dropdown">
           <%= link_to "Spotlight Setup", spotlights_path, class: "navbar-item" %>
-          <%= link_to "Spotlight Cues", cues_path, class: "navbar-item" %>
-          <%= link_to "Spotlight Operators", people_path, class: "navbar-item" %>
-          <%= link_to "Spotlight Models", spotlight_models_path, class: "navbar-item" %>
           <%= link_to "Spotlight Positions", spotlight_positions_path, class: "navbar-item" %>
+          <%= link_to "Spotlight Models", spotlight_models_path, class: "navbar-item" %>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">Spotlight Cues</a>
+        <div class="navbar-dropdown">
+          <%= link_to "Spot Cues", spot_cues_path, class: "navbar-item" %>
+          <%= link_to "Spot Cues Matrix", spot_cues_matrix_path, class: "navbar-item" %>
+          <%= link_to "Spot Cue Spotlights", spot_cue_spotlights_path, class: "navbar-item" %>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">General</a>
+        <div class="navbar-dropdown">
+          <%= link_to "People", people_path, class: "navbar-item" %>
+          <%= link_to "Manufacturers", manufacturers_path, class: "navbar-item" %>
+          <%= link_to "Gel Colors", colors_path, class: "navbar-item" %>
         </div>
       </div>
       <div class="navbar-item has-dropdown is-hoverable">
@@ -36,7 +50,6 @@
           <a class="navbar-item" href="/">Inventory Locations</a>
         </div>
       </div>
-      <%= link_to "Gel Colors", colors_path, class: "navbar-item" %>
     </nav>
     <%= yield %>
   </body>

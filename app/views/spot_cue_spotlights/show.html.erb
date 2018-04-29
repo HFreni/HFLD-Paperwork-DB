@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Spot cue:</strong>
+  <%= @spot_cue_spotlight.spot_cue.descriptive_name %>
+</p>
+
+<p>
+  <strong>Spotlight:</strong>
+  <%= @spot_cue_spotlight.spotlight.descriptive_name %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @spot_cue_spotlight.size %>
+</p>
+
+<p>
+  <strong>Intensity:</strong>
+  <%= @spot_cue_spotlight.intensity %>
+</p>
+
+<p>
+  <strong>Action:</strong>
+  <%= @spot_cue_spotlight.action %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @spot_cue_spotlight.time %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @spot_cue_spotlight.notes %>
+</p>
+
+<%= link_to 'Edit', edit_spot_cue_spotlight_path(@spot_cue_spotlight) %> |
+<%= link_to 'Back', spot_cue_spotlights_path %>

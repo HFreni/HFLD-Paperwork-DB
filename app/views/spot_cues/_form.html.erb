@@ -1,0 +1,68 @@
+<%= form_with(model: spot_cue, local: true) do |form| %>
+  <% if spot_cue.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(spot_cue.errors.count, "error") %> prohibited this spot_cue from being saved:
+      </h2>
+
+      <ul>
+        <% spot_cue.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= form.label :number, :class => "label" %>
+    <%= form.number_field :number, :class =>"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :light_cue_number, :class => "label" %>
+    <%= form.number_field :light_cue_number, :class =>"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cue_type, :class => "label" %>
+    <%= form.select :cue_type, SpotCue.cue_types { |value| [ value, value ] } %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name, :class => "label" %>
+    <%= form.text_field :name, :class =>"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes, :class => "label" %>
+    <%= form.text_field :notes, :class =>"input" %>
+  </div>
+
+  <p class="subtitle">Spot Cue Spotlights</p>
+  <table class="table is-fullwidth">
+    <thead>
+      <tr>
+        <th>Spotlight</th>
+        <th>Color</th>
+        <th>Size</th>
+        <th>Intensity</th>
+        <th>Time</th>
+        <th>Action</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody class="spot_cue_spotlights">
+    <% form.fields_for :spot_cue_spotlights do |spot_cue_spotlight| %>
+      <%= render 'spot_cue_spotlight_fields', f: spot_cue_spotlight %>
+    <% end %>
+    </tbody>
+  </table>
+  <div id="links">
+    <%= link_to_add_association 'add spotlight', form, :spot_cue_spotlights, data: {"association-insertion-node" => "tbody.spot_cue_spotlights", "association-insertion-method" => "append"}%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit :class => "button is-link" %>
+  </div>
+<% end %>
